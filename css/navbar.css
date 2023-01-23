@@ -23,6 +23,9 @@
 	color: #ffffff;
 	font-size: 14px;
 }
+.btn-sell:hover {
+	color: #ffffff;
+}
 .btn-signUp-login {
 	background-color: #ffffff;
 	color: #000000;
