@@ -1,0 +1,29 @@
+.navbar {
+	background-color: #ffffff;
+	border-bottom: 1px solid #cfc9c9;
+}
+.navbar-brand {
+	margin-right: 0;
+}
+
+.logo {
+	width: 100px;
+	height: 45px;
+}
+.input-group {
+	width: 75%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+.btn-sell {
+	background-color: #712296;
+	color: #ffffff;
+	font-size: 14px;
+}
+.btn-signUp-login {
+	background-color: #ffffff;
+	color: #000000;
+	border-color: #cfc9c9;
+	font-size: 14px;
+	margin-right: 2%;
+}
