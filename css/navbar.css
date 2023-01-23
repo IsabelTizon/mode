@@ -1,3 +1,4 @@
+/* Navbar 1 */
 .navbar {
 	background-color: #ffffff;
 	border-bottom: 1px solid #cfc9c9;
@@ -28,4 +29,23 @@
 	border-color: #cfc9c9;
 	font-size: 14px;
 	margin-right: 2%;
+}
+
+/* Navbar 2 */
+.section-links-navbar {
+	display: flex;
+	flex-direction: row;
+	border-bottom: 1px solid #cfc9c9;
+	padding: 10px 10px 10px 40px;
+}
+.link-navbar {
+	color: #cfc9c9;
+	margin-right: 40px;
+	letter-spacing: 2px;
+	font-size: 14px;
+}
+.link-navbar:hover {
+	color: #712296;
+	text-decoration: none;
+	font-weight: 700;
 }
