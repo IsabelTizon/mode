@@ -5,7 +5,9 @@
 .navbar-brand {
 	margin-right: 0;
 }
-
+.navbar-toggler-icon {
+	color: #000000;
+}
 .logo {
 	width: 100px;
 	height: 45px;
