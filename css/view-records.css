@@ -1,0 +1,34 @@
+.section-card-items-home {
+	display: flex;
+	flex-wrap: wrap;
+
+	width: 80%;
+	margin: 20px auto;
+}
+.card-item {
+	margin: 10px 10px 30px;
+	width: 22%;
+}
+.card-img-top {
+	width: 100%;
+	border-radius: 5px;
+}
+.display-title-favorite {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.card-title {
+	margin: 0;
+	font-weight: 900;
+}
+.material-symbols-outlined {
+	color: #f00606;
+}
+.card-text {
+	font-size: 14px;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
