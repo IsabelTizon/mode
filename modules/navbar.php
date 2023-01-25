@@ -23,5 +23,8 @@
     <a class="link-navbar" href="#">Men</a>
     <a class="link-navbar" href="#">Kids</a>
     <a class="link-navbar" href="#">Entertainment</a>
+    <a class="link-navbar" href="#">Shoes</a>
+    <a class="link-navbar" href="#">Accessories</a>
+    <a class="link-navbar" href="#">Sport</a>
     <a class="link-navbar" href="#">Pet care</a>
 </div>
