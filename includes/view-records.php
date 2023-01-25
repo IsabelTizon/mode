@@ -1,6 +1,6 @@
 <?php
 
-if ($stmt = $conn->prepare("SELECT itemPic, title, descript, category, brand, condition, price FROM itemsMode")) {
+if ($stmt = $conn->prepare("SELECT itemPic, title, descript, category, brand, condition1, price FROM itemsMode")) {
     $stmt->execute(); // execute sql statement
     $result = $stmt->get_result(); //returns the results from sql statement
 

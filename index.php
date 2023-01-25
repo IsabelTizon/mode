@@ -44,8 +44,10 @@ error_reporting(E_ALL);
     </div>
 
     <!-- Records -->
-    <div class="records-home"></div>
-    <?php include('includes/view-records.php'); ?>
+    <div class="records-home">
+      <?php include('includes/view-records.php'); ?>
+    </div>
+
 
   </main>
 
