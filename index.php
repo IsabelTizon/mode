@@ -18,7 +18,8 @@ error_reporting(E_ALL);
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/view-records.css">
 
-  <?php include("modules/head-content.php"); ?>
+  <?php include('includes/dbconx.php');
+  include("modules/head-content.php"); ?>
 </head>
 
 <body>
@@ -43,10 +44,8 @@ error_reporting(E_ALL);
     </div>
 
     <!-- Records -->
-    <div class="records-home">
-      <?php include 'includes/dbconx.php';
-      include 'includes/view-records.php'; ?>
-    </div>
+    <div class="records-home"></div>
+    <?php include('includes/view-records.php'); ?>
 
   </main>
 

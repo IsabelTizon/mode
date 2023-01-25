@@ -22,7 +22,7 @@ if ($stmt = $conn->prepare("SELECT itemPic, title, descript, category, brand, co
     }
 
     echo '</div>';
-    $stmt->close(); // close sql statement - optional and depends on context
-    $conn->close(); // close dbase connection - optional and depend on context
+    $stmt->close(); // close sql statement
+    $conn->close(); // close dbase connection
 
 }
