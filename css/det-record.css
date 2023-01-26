@@ -1,16 +1,19 @@
+.record {
+	width: 80%;
+	margin: 30px auto;
+}
 .details-record {
 	display: flex;
 	flex-direction: row;
-	width: 80%;
-	margin: 30px auto;
 }
 .container-details {
 	display: flex;
 	flex-direction: column;
 }
 img.img-record {
-	width: 100px !important;
-	height: 300px !important;
+	width: 30%;
+	height: 400px;
+	border-radius: 5px;
 }
 .detail {
 	color: brown;

@@ -15,7 +15,8 @@ error_reporting(E_ALL);
 <!-- Head data -->
 
 <head>
-    <link rel="stylesheet" href="css/details-record.css">
+    <link rel="stylesheet" href="css/det-record.css">
+
     <?php include('includes/dbconx.php');
     include("modules/head-content.php"); ?>
 
