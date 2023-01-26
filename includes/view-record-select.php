@@ -1,15 +1,14 @@
 <?php
 
-if ($stmt = $conn->prepare("SELECT image_ID, itemPic, title, descript, category, brand, condition1, size, price FROM itemsMode")) {
+$ID =  $_GET['ID'];
+
+if ($stmt = $conn->prepare("SELECT * FROM itemsMode WHERE image_ID='$ID'")) {
     $stmt->execute(); // execute sql statement
-    $result = $stmt->get_result(); //returns the results from sql statement
+    $result = $stmt->get_result();
 
 
-
-    //DISPLAYING DATABASE WITH BOOTSTRAP CARDS
     echo '<div class="section-card-items-home">';
     while ($row = $result->fetch_assoc()) { //fetches one row of data from the results set. Continues until there are no more rows
-
 
 
         echo '<div class="card-item">';

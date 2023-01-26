@@ -1,0 +1,8 @@
+.record-select {
+	display: flex;
+	flex-direction: row;
+}
+.info-record-select {
+	display: flex;
+	flex-direction: column;
+}
