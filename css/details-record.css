@@ -1,0 +1,17 @@
+.details-record {
+	display: flex;
+	flex-direction: row;
+	width: 80%;
+	margin: 30px auto;
+}
+.container-details {
+	display: flex;
+	flex-direction: column;
+}
+img.img-record {
+	width: 100px !important;
+	height: 300px !important;
+}
+.detail {
+	color: brown;
+}

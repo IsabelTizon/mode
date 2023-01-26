@@ -15,7 +15,7 @@ error_reporting(E_ALL);
 <!-- Head data -->
 
 <head>
-    <link rel="stylesheet" href="css/view-record-select.css">
+    <link rel="stylesheet" href="css/details-record.css">
 
     <?php include('includes/dbconx.php');
     include("modules/head-content.php"); ?>
@@ -30,7 +30,7 @@ error_reporting(E_ALL);
     <main>
         <!-- Record -->
         <div class="record">
-            <?php include('includes/view-record-select.php'); ?>
+            <?php include('includes/details-record.php'); ?>
         </div>
 
 
