@@ -1,0 +1,37 @@
+.record {
+	width: 60%;
+	margin: 50px auto;
+}
+.det-record {
+	display: flex;
+	flex-direction: row;
+}
+.container-det {
+	display: flex;
+	flex-direction: column;
+	margin-left: 15%;
+}
+img.img-record {
+	width: 33%;
+	height: 400px;
+	border-radius: 5px;
+}
+.det-price {
+	margin-bottom: 50px;
+}
+.det {
+	color: #000000;
+}
+.display-btnBuy-favorite {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 80px;
+}
+.favorite-icon {
+	color: rgb(255, 0, 0);
+}
+.btn-purple {
+	background-color: #712296 !important;
+	color: #ffffff !important;
+}
