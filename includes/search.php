@@ -34,8 +34,4 @@ if ($stmt = $conn->prepare("SELECT * FROM itemsMode WHERE title LIKE '%$itemQuer
     echo ("Please include a search string"); // if no data is sent then display a user message and provide a link back to the search page
 
 
-    die("<p><a class='btn btn-search btn-danger btn-rounded' href='musicOnline.php'>Search again</a></p>");
-    //die() function prevents any further PHP processing and terminates the dbase connection
-
-
-} // end else
+}
