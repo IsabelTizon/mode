@@ -1,0 +1,39 @@
+video {
+	object-fit: cover;
+	height: 80vh;
+	width: 100vw;
+
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.container-sell {
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: absolute;
+	bottom: 30%;
+	left: 35%;
+	width: 25vw;
+	height: 35vh;
+	margin: auto;
+	background-color: #fff;
+	border-radius: 5px;
+}
+.text-welcome {
+	align-items: center;
+}
+.text-welcome .btn-login {
+	background-color: #712296 !important;
+	color: #ffffff;
+	font-size: 14px;
+}
+.link-signUp {
+	color: #712296;
+	padding-left: 10px;
+}
+.link-signUp:hover {
+	text-decoration: none;
+}

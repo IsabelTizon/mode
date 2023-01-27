@@ -16,4 +16,8 @@ switch (basename($_SERVER['PHP_SELF'])) { //return the trailing name of the path
         $page_title = "Item page";
         $meta_desc = "This is some information about the item page.";
         break;
+    case "welcome.php":
+        $page_title = "Item page";
+        $meta_desc = "This is welcome page to login or sign up.";
+        break;
 }

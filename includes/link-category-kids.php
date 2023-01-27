@@ -1,12 +1,10 @@
 <?php
-$itemQuery = $_GET['itemQuery']; //connecting with email.php
 
-if ($stmt = $conn->prepare("SELECT * FROM itemsMode WHERE title LIKE '%$itemQuery%'  OR descript LIKE '%$itemQuery%'  OR category LIKE '%$itemQuery%' OR brand LIKE '%$itemQuery%' OR size LIKE '%$itemQuery%' OR condition1 LIKE '%$itemQuery%' OR price LIKE '%$itemQuery%'")) {
+if ($stmt = $conn->prepare("SELECT * FROM itemsMode WHERE category='kids'")) {
     $stmt->execute(); // execute sql statement
     $result = $stmt->get_result();
 
 
-    //DISPLAYING DATABASE WITH BOOTSTRAP CARDS
     echo '<div class="section-card-items-home">';
     while ($row = $result->fetch_assoc()) { //fetches one row of data from the results set. Continues until there are no more rows
 
@@ -29,5 +27,4 @@ if ($stmt = $conn->prepare("SELECT * FROM itemsMode WHERE title LIKE '%$itemQuer
     echo '</div>';
     $stmt->close(); // close sql statement
     $conn->close(); // close dbase connection
-
 }
