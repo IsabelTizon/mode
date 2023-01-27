@@ -31,6 +31,8 @@ error_reporting(E_ALL);
         <!-- Records -->
         <div class="records-home">
             <?php include('includes/search.php'); ?>
+
+
         </div>
 
 
