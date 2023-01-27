@@ -9,19 +9,32 @@
             <input class="inputSearch input-group" type="text" name="itemQuery" id="itemQuery">
             <input class="btn material-symbols-outlined search-icon" type="submit" name="submit" id="submit" value="Search">
         </form>
-        <!-- </div> -->
-        <button type="button" class="btn btn-signUp-login">Sign up / Log in</button>
-        <button type="button" class="btn btn-sell">Sell now</button>
+    </div>
+
+    <button type="button" href="question-home.php" class="btn btn-signUp-login" onclick="questionHome()">Sign up / Log in</button>
+    <button type="button" class="btn btn-sell" onclick=" sellNow()">Sell now</button>
+
     </div>
 </nav>
 
 <div class="section-links-navbar">
-    <a class="link-navbar" href="#">Women</a>
-    <a class="link-navbar" href="#">Men</a>
-    <a class="link-navbar" href="#">Kids</a>
-    <a class="link-navbar" href="#">Entertainment</a>
-    <a class="link-navbar" href="#">Shoes</a>
-    <a class="link-navbar" href="#">Accessories</a>
-    <a class="link-navbar" href="#">Sport</a>
-    <a class="link-navbar" href="#">Pet care</a>
+    <a class="link-navbar" href="link-women-page.php">Women</a>
+    <a class="link-navbar" href="link-men-page.php">Men</a>
+    <a class="link-navbar" href="link-kids-page.php">Kids</a>
+    <a class="link-navbar" href="link-entertainment-page.php">Entertainment</a>
+    <a class="link-navbar" href="link-shoes-page.php">Shoes</a>
+    <a class="link-navbar" href="link-accessories-page.php">Accessories</a>
+    <a class="link-navbar" href="link-sport-page.php">Sport</a>
+    <a class="link-navbar" href="link-petCare-page.php">Pet care</a>
+
 </div>
+
+<script>
+    function questionHome() {
+        location.href = "welcome.php";
+    }
+
+    function sellNow() {
+        location.href = "welcome.php";
+    }
+</script>
