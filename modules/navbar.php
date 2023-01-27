@@ -5,14 +5,11 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="input-group">
-            <input class="form-control py-2 border-right-0 border" type="search" value="search" id="example-search-input">
-            <span class="input-group-append">
-                <div class="input-group-text bg-transparent"><span class="material-symbols-outlined">
-                        search
-                    </span></div>
-            </span>
-        </div>
+        <form class="form-search" action=" search-page.php" method="GET" name="search-items">
+            <input class="inputSearch input-group" type="text" name="itemQuery" id="itemQuery">
+            <input class="btn material-symbols-outlined search-icon" type="submit" name="submit" id="submit" value="Search">
+        </form>
+        <!-- </div> -->
         <button type="button" class="btn btn-signUp-login">Sign up / Log in</button>
         <button type="button" class="btn btn-sell">Sell now</button>
     </div>

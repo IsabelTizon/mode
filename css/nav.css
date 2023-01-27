@@ -5,6 +5,7 @@
 }
 .navbar-brand {
 	margin-right: 0;
+	width: 7%;
 }
 .navbar-toggler-icon {
 	color: #000000;
@@ -13,10 +14,15 @@
 	width: 100px;
 	height: 45px;
 }
-.input-group {
-	width: 75%;
+/* search */
+.form-search {
+	width: 80%;
+	display: flex;
+	flex-direction: row;
+}
+.inputSearch {
+	width: 85% !important;
 	margin-left: 2%;
-	margin-right: 2%;
 }
 .btn-sell {
 	background-color: #712296;
