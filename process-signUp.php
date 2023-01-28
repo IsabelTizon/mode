@@ -58,4 +58,12 @@ if (!$stmt->prepare($sql)) {
 
 $stmt->bind_param("sss", $_POST["username"], $_POST["email"], $password_hash);
 
-$stmt->execute();
+if ($stmt->execute()) {
+    header("Location: login.php");
+} else {
+    if ($conn->error === 1062) {
+        die("email is already taken");
+    } else {
+        die("SQL error: " . $conn->error);
+    }
+}
