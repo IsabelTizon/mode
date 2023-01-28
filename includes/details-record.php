@@ -2,7 +2,7 @@
 
 $ID =  $_GET['ID'];
 
-if ($stmt = $conn->prepare("SELECT * FROM itemsMode WHERE image_ID='$ID'")) {
+if ($stmt = $conn->prepare("SELECT * FROM itemsMode WHERE order_ID='$ID'")) {
     $stmt->execute(); // execute sql statement
     $result = $stmt->get_result();
 

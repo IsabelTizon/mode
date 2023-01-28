@@ -34,11 +34,14 @@ error_reporting(E_ALL);
                 <source src="media/hero.mp4" type="video/mp4" />
             </video>
             <div class="container-sell">
-                <h3 class="text-welcome">Welcome!</h3>
-                <button class="btn btn-login" onclick="login()">
-                    Login
-                </button>
-                <p>Don´t you have an account?><a class="link-signUp" href="sign-up.php">Sign up</a></p>
+                <h3 class="text-welcome">Login</h3>
+
+
+                <form action="signed.php" method="post">
+                    <input type="text" name="name"><br>
+                    <input type="text" name="password"><br>
+                    <input type="Continue">
+                </form>
             </div>
         </div>
 
@@ -48,14 +51,6 @@ error_reporting(E_ALL);
     <footer>
         <?php include("modules/footer.php"); ?>
     </footer>
-
-
-
-    <script>
-        function login() {
-            location.href = "login.php";
-        }
-    </script>
 </body>
 
 </html>
