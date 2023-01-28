@@ -2,6 +2,10 @@
 include("includes/error-reporting.php");
 include("includes/config.php"); ?>
 
+<!-- if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+
+} -->
 <!doctype html>
 <html lang="en">
 
@@ -23,7 +27,7 @@ error_reporting(E_ALL);
 
 <body>
     <header>
-        <?php include("modules/navbar.php"); ?>
+        <?php include("modules/navbar-logged.php"); ?>
     </header>
 
     <!-- main content data  -->
@@ -38,9 +42,14 @@ error_reporting(E_ALL);
 
 
                 <form action="signed.php" method="post">
-                    <input type="text" name="name"><br>
-                    <input type="text" name="password"><br>
-                    <input type="Continue">
+
+                    <label for="email">Email</label><br>
+                    <input type="password" name="email" id="email"><br>
+
+                    <label for="password">Password</label><br>
+                    <input type="password" name="password" id="password"><br>
+
+                    <button class="btn btn-info">Continue</button>
                 </form>
             </div>
         </div>
