@@ -19,12 +19,12 @@
             <span class="material-symbols-outlined">person</span>
         </a>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Account name</a>
+            <a class="dropdown-item" href="#"></a>
             <a class="dropdown-item" href="#">My Dashboard</a>
             <a class="dropdown-item" href="#">Edit Record</a>
             <a class="dropdown-item" href="#">Delete Record</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Logged out</a>
+            <a class="dropdown-item" href="logout.php">Logged out</a>
         </div>
     </div>
     <span class="material-symbols-outlined">favorite</span>

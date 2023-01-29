@@ -4,8 +4,10 @@ session_start();
 print_r($_SESSION); //print out the sesion array ej: Array ( [user_id] => 1 )
 
 
+
 include("includes/error-reporting.php");
 include("includes/config.php");
+
 
 ?>
 
