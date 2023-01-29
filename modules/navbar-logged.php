@@ -12,7 +12,7 @@
     </div>
 
 
-    <button type="button" class="btn btn-sell" onclick=" sellNow()">Sell now</button>
+
 
     <div class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -28,8 +28,8 @@
         </div>
     </div>
     <span class="material-symbols-outlined">favorite</span>
-
     </div>
+    <button type="button" class="btn btn-sell" onclick=" sellNow()">Sell now</button>
 </nav>
 
 <div class="section-links-navbar">
