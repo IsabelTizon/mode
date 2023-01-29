@@ -1,8 +1,17 @@
-<?php include("includes/active_session.php");
+<?php
+session_start();
+
+print_r($_SESSION); //print out the sesion array ej: Array ( [user_id] => 1 )
+
+
 include("includes/error-reporting.php");
-include("includes/config.php"); ?>
+include("includes/config.php");
+
+?>
+
 
 <!doctype html>
+
 <html lang="en">
 
 <?php
@@ -24,7 +33,15 @@ error_reporting(E_ALL);
 
 <body>
   <header>
-    <?php include("modules/navbar.php"); ?>
+    <?php
+
+    if (isset($_SESSION["user_id"])) {
+      include("modules/navbar-logged.php");
+    } else {
+      include("modules/navbar.php");
+    }
+
+    ?>
   </header>
 
   <!-- main content data  -->

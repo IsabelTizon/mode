@@ -1,20 +1,20 @@
-<?php include("includes/active_session.php");
+<?php
 include("includes/error-reporting.php");
-include("includes/config.php"); ?>
+include("includes/config.php");
+include("includes/active-session.php")
+?>
 
-<!-- if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-
-} -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <?php
 //ini_set() method
 ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 ?>
+
+
 
 <!-- Head data -->
 
@@ -27,7 +27,7 @@ error_reporting(E_ALL);
 
 <body>
     <header>
-        <?php include("modules/navbar-logged.php"); ?>
+        <?php include("modules/navbar.php"); ?>
     </header>
 
     <!-- main content data  -->
@@ -40,11 +40,14 @@ error_reporting(E_ALL);
             <div class="container-sell">
                 <h3 class="text-welcome">Login</h3>
 
+                <?php if ($is_invalid) : ?>
+                    <p style="font-size:13px;color:red">Invalid login</p>
+                <?php endif; ?>
 
-                <form action="signed.php" method="post">
 
+                <form method="post">
                     <label for="email">Email</label><br>
-                    <input type="password" name="email" id="email"><br>
+                    <input type="email" name="email" id="email" value="<?= htmlspecialchars($_POST['email'] ?? "") ?>"><br>
 
                     <label for="password">Password</label><br>
                     <input type="password" name="password" id="password"><br>
