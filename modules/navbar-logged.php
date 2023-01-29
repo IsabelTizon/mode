@@ -1,3 +1,14 @@
+<?php
+
+include('includes/dbconx.php');
+include("includes/error-reporting.php");
+include("includes/config.php");
+include('includes/active-session.php');
+
+
+?>
+
+
 <nav class="navbar navbar-expand-lg">
     <a class="navbar-brand" href="index.php"><img class="logo" src="media/logo/logo.png" alt="logo"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +31,8 @@
         </a>
         <div class="dropdown-menu">
             <a class="dropdown-item" href="#"></a>
-            <a class="dropdown-item" href="#">My Dashboard</a>
+            <a class="dropdown-item" href="#"><?= htmlspecialchars($user["username"]) ?></a>
+            <a class="dropdown-item" href="#">Dashboard</a>
             <a class="dropdown-item" href="#">Edit Record</a>
             <a class="dropdown-item" href="#">Delete Record</a>
             <div class="dropdown-divider"></div>

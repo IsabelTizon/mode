@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-print_r($_SESSION); //print out the sesion array ej: Array ( [user_id] => 1 )
+// print_r($_SESSION); //print out the sesion array ej: Array ( [user_id] => 1 )
 
 
 
@@ -42,6 +42,13 @@ error_reporting(E_ALL);
     } else {
       include("modules/navbar.php");
     }
+
+    // if (isset($_SESSION[$user])) {
+    //   include("modules/navbar-logged.php");
+    // } else {
+    //   include("modules/navbar.php");
+    // }
+
 
     ?>
   </header>

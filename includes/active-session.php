@@ -26,3 +26,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
     $is_invalid = true;
 }
+
+
+if (isset(($_SESSION)['user_id'])) {
+    $sql = "SELECT * FROM users WHERE user_ID = {$_SESSION["user_id"]}";
+
+    $result = $conn->query($sql);
+    $user = $result->fetch_assoc();
+}
