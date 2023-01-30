@@ -1,0 +1,8 @@
+main.container-sell {
+	width: 70% !important;
+	margin: 30px auto !important;
+}
+.container-input {
+	display: flex;
+	flex-direction: row;
+}

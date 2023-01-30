@@ -58,6 +58,6 @@ include('includes/active-session.php');
 
 <script>
     function sellNow() {
-        location.href = "welcome.php";
+        location.href = "sell.php";
     }
 </script>
