@@ -1,0 +1,52 @@
+const validation = new JustValidate("#signUp");
+
+validation
+	.addField("#username", [
+		{
+			rule: "required",
+		},
+	])
+	.addField("#email", [
+		{
+			rule: "required",
+		},
+		{
+			rule: "email",
+		},
+		{
+			validator: (value) => () => {
+				return fetch("validate-email.php=" + encodeURIComponent(value))
+					.then(function (response) {
+						return response.json();
+					})
+					.then(function (json) {
+						return json.available;
+					});
+			},
+			errorMessage: "email already taken",
+		},
+	])
+	.addField("#password", [
+		{
+			rule: "required",
+		},
+		{
+			rule: "password",
+		},
+	])
+	.addField("#password_confirmation", [
+		{
+			validator: (value, fields) => {
+				return value === fields["#password"].elem.value;
+			},
+			errorMessage: "Passwords should match",
+		},
+	])
+	.addField("#checkbox_age", [
+		{
+			rule: "required",
+		},
+	]);
+// .onSuccess((event)) => {
+// document.getElementById("signUp").submit();
+// }
