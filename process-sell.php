@@ -101,7 +101,7 @@ $stmt->bind_param("sssssssss", $_SESSION["user_id"], $_GET["file"], $_GET["title
 
 
 if ($stmt->execute()) {
-    header("Location: login.php");
+    header("Location: index.php");
     exit;
 } else {
     die($conn->error);
