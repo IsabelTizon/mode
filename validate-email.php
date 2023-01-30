@@ -1,5 +1,4 @@
 <?php include("includes/dbconx.php");
-// include("includes/active_session.php");
 include("includes/error-reporting.php");
 
 $sql = sprintf("SELECT * FROM users WHERE email = '%s'", $conn->real_escape_string($_GET["email"]));
