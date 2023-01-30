@@ -4,6 +4,7 @@ include("includes/error-reporting.php");
 
 
 
+
 //Validating the user name
 if (empty($_POST["username"])) {
     die("name is required");

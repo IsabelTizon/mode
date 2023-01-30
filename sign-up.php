@@ -22,10 +22,10 @@ error_reporting(E_ALL);
 
     <!-- Just validate -->
     <!-- defer atributte to ensure they downloded in order -->
-    <!-- 
+
     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
 
-    <script src="./js/validation.js" defer></script> -->
+    <script src="./js/validation.js" defer></script>
 
 </head>
 
@@ -47,28 +47,36 @@ error_reporting(E_ALL);
                 <!-- Form POST method -->
                 <form action="process-signUp.php" method="post" id="signUp" novalidate>
                     <!-- User name -->
-                    <label for="username">User name</label><br>
-                    <input type="text" id="username" name="username"><br>
-
+                    <div>
+                        <label for="username">User name</label><br>
+                        <input type="text" id="username" name="username"><br>
+                    </div>
                     <!-- email -->
-                    <label for="email">Email</label><br>
-                    <input type="password" id="email" name="email" id="email"><br>
+                    <div>
+                        <label for="email">Email</label><br>
+                        <input type="password" id="email" name="email" id="email"><br>
+                    </div>
+
 
                     <!-- password -->
-                    <label for="password">Password</label><br>
-                    <input type="password" name="password" id="password"><br>
+                    <div>
+                        <label for="password">Password</label><br>
+                        <input type="password" name="password" id="password"><br>
+                    </div>
+
 
                     <!-- Repeat password -->
-                    <label for="password_confirmation">Repeat password</label><br>
-                    <input type="password" name="password_confirmation" id="password_confirmation"><br>
-
+                    <div>
+                        <label for="password_confirmation">Repeat password</label><br>
+                        <input type="password" name="password_confirmation" id="password_confirmation"><br>
+                    </div>
 
                     <div class="checkbox-age">
                         <input type="checkbox" name="checkbox_age" id="checkbox_age" value="yes" />
                         <label for="checkbox_age">By registering, Y confirm that I accept Mode Terms and conditions and I have read the Privacy Policy and I am at least 18 years old.</label>
                     </div>
 
-                    <button class="btn btn-info">Continue</button>
+                    <button type="submit" class="btn btn-info">Continue</button>
 
                 </form>
             </div>
@@ -80,7 +88,6 @@ error_reporting(E_ALL);
     <footer>
         <?php include("modules/footer.php"); ?>
     </footer>
-
 
 </body>
 

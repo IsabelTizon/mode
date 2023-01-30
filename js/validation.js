@@ -13,18 +13,18 @@ validation
 		{
 			rule: "email",
 		},
-		{
-			validator: (value) => () => {
-				return fetch("validate-email.php=" + encodeURIComponent(value))
-					.then(function (response) {
-						return response.json();
-					})
-					.then(function (json) {
-						return json.available;
-					});
-			},
-			errorMessage: "email already taken",
-		},
+		// {
+		// 	validator: (value) => () => {
+		// 		return fetch("validate-email.php=" + encodeURIComponent(value))
+		// 			.then(function (response) {
+		// 				return response.json();
+		// 			})
+		// 			.then(function (json) {
+		// 				return json.available;
+		// 			});
+		// 	},
+		// 	errorMessage: "email already taken",
+		// },
 	])
 	.addField("#password", [
 		{
