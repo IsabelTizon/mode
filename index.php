@@ -36,20 +36,11 @@ error_reporting(E_ALL);
 <body>
   <header>
     <?php
-
     if (isset($_SESSION["user_id"])) {
       include("modules/navbar-logged.php");
     } else {
       include("modules/navbar.php");
     }
-
-    // if (isset($_SESSION[$user])) {
-    //   include("modules/navbar-logged.php");
-    // } else {
-    //   include("modules/navbar.php");
-    // }
-
-
     ?>
   </header>
 
@@ -62,7 +53,7 @@ error_reporting(E_ALL);
       </video>
       <div class="container-sell">
         <h3 class="text-hero">Give it a second life!</h3>
-        <button class="btn btn-sell-hero" onclick="location.href='welcome.php'">
+        <button class="btn btn-sell-hero" onclick="location.href='sell.php'">
           Sell now
         </button>
         <a class="text-link-hero" href="#">Learn how it works</a>

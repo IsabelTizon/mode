@@ -28,6 +28,9 @@ error_reporting(E_ALL);
     <link rel="stylesheet" href="css/view-records.css">
     <link rel="stylesheet" href="css/sell.css">
 
+    <style>
+    </style>
+
     <?php include('includes/dbconx.php');
     include("modules/head-content.php"); ?>
 </head>
@@ -48,7 +51,7 @@ error_reporting(E_ALL);
     <!-- main content data  -->
     <main class="container-sell">
         <h1>Sell an item</h1>
-        <form action="process-sell.php" method="get" id="sell" enctype="multipart/form-data" novalidate>
+        <form class="sell-form" action="process-sell.php" method="get" id="sell" enctype="multipart/form-data" novalidate>
 
             <!-- user -->
             <?php include("includes/active-session.php") ?>

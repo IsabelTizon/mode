@@ -1,4 +1,7 @@
-<?php include("includes/active_session.php");
+<?php
+session_start();
+
+include("includes/active_session.php");
 include("includes/error-reporting.php");
 include("includes/config.php"); ?>
 
@@ -23,7 +26,13 @@ error_reporting(E_ALL);
 
 <body>
     <header>
-        <?php include("modules/navbar.php"); ?>
+        <?php
+        if (isset($_SESSION["user_id"])) {
+            include("modules/navbar-logged.php");
+        } else {
+            include("modules/navbar.php");
+        }
+        ?>
     </header>
 
     <!-- main content data  -->
