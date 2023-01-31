@@ -13,7 +13,7 @@ if ($stmt = $conn->prepare("SELECT order_ID, itemPic, title, descript, category,
 
 
         echo '<div class="card-item">';
-        echo '<a href="item-page.php?ID=' . $row['order_ID'] . '"><img class="card-img-top" alt="item picture" src=' . '"' . $row['itemPic'] . '"' . '></a>';
+        echo '<a href="item-page.php?ID=' . $row['order_ID'] . '"><img class="card-img-top" alt="item picture" src=' . '"media/items/photos/' . $row['itemPic'] . '"' . '></a>';
         echo '<div class="card-body"></a>';
         echo '<div class="display-title-favorite">';
         echo '<h6 class="card-title">' . $row['price'] . '</h6>';
