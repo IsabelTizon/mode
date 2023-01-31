@@ -17,6 +17,13 @@ error_reporting(E_ALL);
 <head>
     <link rel="stylesheet" href="css/welcome.css">
 
+    <style>
+        button.btn.btn-login {
+            background-color: #712296 !important;
+            color: #ffffff;
+            font-size: 14px;
+        }
+    </style>
     <?php include('includes/dbconx.php');
     include("modules/head-content.php"); ?>
 </head>

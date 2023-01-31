@@ -25,11 +25,12 @@ video {
 .text-welcome {
 	align-items: center;
 }
-.text-welcome .btn-login {
+
+/* button.btn.btn-login {
 	background-color: #712296 !important;
 	color: #ffffff;
 	font-size: 14px;
-}
+} */
 .link-signUp {
 	color: #712296;
 	padding-left: 10px;
