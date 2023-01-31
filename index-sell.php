@@ -34,9 +34,24 @@ error_reporting(E_ALL);
       margin: 50px auto !important;
     }
 
+    .sell-page-title {
+      margin-bottom: 50px;
+    }
+
     .container-input {
       display: flex;
       flex-direction: row;
+      background-color: #FCF9F9;
+      margin-bottom: 40px;
+      height: 80px;
+      padding: 20px;
+    }
+
+    .text-input {
+      border: none;
+      background-color: #FCF9F9;
+      border-bottom: 1px solid #928D8D;
+      width: 80%;
     }
   </style>
   <?php include('includes/dbconx.php');
@@ -56,7 +71,7 @@ error_reporting(E_ALL);
 
   <!-- main content data  -->
   <main class="index-sell">
-    <h1>Sell an item</h1>
+    <h1 class="sell-page-title">Sell an item</h1>
     <form class="sell-form" action="process-sell.php" method="get" id="sell" enctype="multipart/form-data" novalidate>
 
       <!-- user -->
@@ -73,13 +88,13 @@ error_reporting(E_ALL);
       <!-- title -->
       <div class="container-input">
         <label for="title">title</label><br>
-        <input type="title" id="title" name="title" placeholder="e.g. Black jeans"><br>
+        <input class="text-input" type="title" id="title" name="title" placeholder="e.g. Black jeans"><br>
       </div>
 
       <!-- Description -->
       <div class="container-input">
         <label for="descript">Description</label><br>
-        <input type="descript" id="descript" name="descript" id="descript" placeholder="e.g. hight waist skinny jeans"><br>
+        <input class="text-input" type="descript" id="descript" name="descript" id="descript" placeholder="e.g. hight waist skinny jeans"><br>
       </div>
 
 
@@ -106,13 +121,13 @@ error_reporting(E_ALL);
         </div>
       </div>
 
-      <!-- Repeat brand -->
+      <!-- brand -->
       <div class="container-input">
         <label for="brand">Brand</label><br>
-        <input type="brand" name="brand" id="brand" placeholder="e.g. Lee"><br>
+        <input class="text-input" type="brand" name="brand" id="brand" placeholder="e.g. Lee"><br>
       </div>
 
-      <!-- Repeat condition -->
+      <!-- condition -->
       <div class="container-input">
         <label for="condition1">Condition</label><br>
         <input type="condition1" name="condition1" id="condition1" placeholder="e.g. only worn a few times"><br>
@@ -142,10 +157,10 @@ error_reporting(E_ALL);
         </div>
       </div>
 
-      <!-- Repeat price -->
+      <!-- price -->
       <div class="container-input">
         <label for="price">Price</label><br>
-        <input type="price" name="price" id="price" placeholder="e.g £11"><br>
+        <input class="text-input" type="price" name="price" id="price" placeholder="e.g £11"><br>
       </div>
 
       <button type="submit" class="btn btn-info">Upload</button>
