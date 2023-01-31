@@ -1,8 +1,9 @@
 <?php
 
+session_start();
 
 include("includes/active_session.php");
-include("includes/dbconx.php");
+include("includes/dbconx.php"); //Database conexion
 include("includes/error-reporting.php");
 
 
@@ -87,6 +88,7 @@ if (isset($_GET['submit'])) {
 }
 
 //inserting input in the database
+
 $sql = "INSERT INTO itemsMode (user_ID, itemPic, title, descript, category, brand, condition1, size, price) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 $stmt = $conn->stmt_init();
@@ -95,14 +97,17 @@ if (!$stmt->prepare($sql)) {
     die("SQL error: " . $conn->error);
 }
 
-$sql = "SELECT * FROM users WHERE user_ID = {$_SESSION["user_id"]}";
+$stmt->bind_param("issssssss", $_GET["user"], $_GET["file"], $_GET["title"], $_GET["descript"], $_GET["category"], $_GET["brand"], $_GET["condition1"], $_GET["size"], $_GET["price"]);
 
-$stmt->bind_param("sssssssss", $_SESSION["user_id"], $_GET["file"], $_GET["title"], $_GET["descript"], $_GET["category"], $_GET["brand"], $_GET["condition1"], $_GET["size"], $_GET["price"]);
 
 
 if ($stmt->execute()) {
-    header("Location: index.php");
+    header("Location: login.php");
     exit;
 } else {
-    die($conn->error);
+    if ($conn->error) {
+        die("email is already taken");
+    } else {
+        die("SQL error: " . $conn->error);
+    }
 }

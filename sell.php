@@ -3,14 +3,12 @@ session_start();
 
 // print_r($_SESSION); //print out the sesion array ej: Array ( [user_id] => 1 )
 
-
-
+include("includes/active_session.php");
+include("includes/dbconx.php");
 include("includes/error-reporting.php");
 include("includes/config.php");
 
-
 ?>
-
 
 <!doctype html>
 
@@ -51,6 +49,10 @@ error_reporting(E_ALL);
     <main class="container-sell">
         <h1>Sell an item</h1>
         <form action="process-sell.php" method="get" id="sell" enctype="multipart/form-data" novalidate>
+
+            <!-- user -->
+            <?php include("includes/active-session.php") ?>
+            <input type='hidden' name='user' value=' <?= $user["user_ID"] ?>'>
 
             <!-- Image -->
             <div class="container-input">
