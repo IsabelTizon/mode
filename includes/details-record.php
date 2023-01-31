@@ -11,10 +11,10 @@ if ($stmt = $conn->prepare("SELECT * FROM itemsMode WHERE order_ID='$ID'")) {
     while ($row = $result->fetch_assoc()) { //fetches one row of data from the results set. Continues until there are no more rows
 
 
-        echo '<img class="img-record" alt="item picture" src=' . '"' . $row['itemPic'] . '"' . '>';
+        echo '<img class="img-record" alt="item picture" src=' . '"media/items/photos/' . $row['itemPic'] . '"' . '>';
 
         echo '<div class="container-det">';
-        echo '<h5 class="det det-price">' . $row['price'] . '</h5>';
+        echo '<h5 class="det det-price">£' . $row['price'] . '</h5>';
         echo '<p class="det det-brand">BRAND: ' . $row['brand'] . '</p>';
         echo '<p class="det det-descript">DESCRIPTION: ' . $row['descript'] . '</p>';
         echo '<p class="det det-size">SIZE: ' . $row['size'] . '</p>';

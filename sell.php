@@ -114,6 +114,7 @@ error_reporting(E_ALL);
                         <?php
                         echo $size = $_GET["size"]
                         ?>
+                        <option <?php echo $size == "on size" ? 'selected' : ''; ?>>one size</option>
                         <option <?php echo $size == "xs" ? 'selected' : ''; ?>>xs</option>
                         <option <?php echo $size == "s" ? 'selected' : ''; ?>>s</option>
                         <option <?php echo $size == "M" ? 'selected' : ''; ?>>M</option>
