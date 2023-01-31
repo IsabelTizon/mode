@@ -41,6 +41,7 @@ error_reporting(E_ALL);
     .container-input {
       display: flex;
       flex-direction: row;
+      justify-content: space-between;
       background-color: #FCF9F9;
       margin-bottom: 40px;
       height: 80px;
@@ -130,7 +131,7 @@ error_reporting(E_ALL);
       <!-- condition -->
       <div class="container-input">
         <label for="condition1">Condition</label><br>
-        <input type="condition1" name="condition1" id="condition1" placeholder="e.g. only worn a few times"><br>
+        <input class="text-input" type="condition1" name="condition1" id="condition1" placeholder="e.g. only worn a few times"><br>
       </div>
 
       <div class="container-input">
