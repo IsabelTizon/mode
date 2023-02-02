@@ -83,7 +83,7 @@ if (isset($_GET['submit'])) {
             echo "There was and error uploading your files!";
         }
     } else {
-        echo "You cannot uplload files of this type!";
+        echo "You cannot upload files of this type!";
     }
 }
 

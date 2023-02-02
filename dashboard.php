@@ -48,7 +48,7 @@ error_reporting(E_ALL);
 
         <!-- Records -->
         <div class="records-home">
-            <h1>My Items</h1>
+            <h1 class="title-dashboard">My Items</h1>
             <?php include('includes/process-dashboard.php'); ?>
         </div>
 
