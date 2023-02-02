@@ -24,6 +24,9 @@ error_reporting(E_ALL);
 <head>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/view-records.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+
 
     <?php include('includes/dbconx.php');
     include("modules/head-content.php"); ?>
@@ -46,7 +49,6 @@ error_reporting(E_ALL);
         <!-- Records -->
         <div class="records-home">
             <h1>My Items</h1>
-
             <?php include('includes/process-dashboard.php'); ?>
         </div>
 

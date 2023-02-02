@@ -1,0 +1,20 @@
+.card-body.body-btn-dashboard {
+	display: flex;
+	flex-direction: column;
+}
+.btn.btn-dashboard {
+	background-color: #712296;
+	color: #ffffff;
+	font-size: 14px;
+	width: 100%;
+}
+.btn.btn-dashboard.btn-dashboard-edit {
+	background-color: #d8e8fa;
+	color: #000000;
+	margin-top: 5px;
+}
+.btn.btn-dashboard.btn-dashboard-delete {
+	background-color: #fad8d8;
+	color: #000000;
+	margin-top: 5px;
+}
