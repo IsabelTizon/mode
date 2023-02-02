@@ -40,12 +40,16 @@ error_reporting(E_ALL);
 
     .container-input {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-between;
       background-color: #FCF9F9;
       margin-bottom: 40px;
-      height: 80px;
+      height: 130px;
       padding: 20px;
+    }
+
+    .container-input-file {
+      height: 150px;
     }
 
     .text-input {
@@ -55,6 +59,15 @@ error_reporting(E_ALL);
       width: 80%;
     }
   </style>
+
+  <!-- Just validate -->
+  <!-- defer atributte to ensure they downloded in order -->
+
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+
+  <script src="./js/validation-sell.js" defer></script>
+
+
   <?php include('includes/dbconx.php');
   include("modules/head-content.php"); ?>
 </head>
@@ -73,45 +86,48 @@ error_reporting(E_ALL);
   <!-- main content data  -->
   <main class="index-sell">
     <h1 class="sell-page-title">Sell an item</h1>
-    <form class="sell-form" action="process-sell.php" method="get" id="sell" enctype="multipart/form-data" novalidate>
+
+
+    <form class="sell-form" action="process-sell.php" method="get" id="formSell" enctype="multipart/form-data" novalidate>
+      <!-- enctype: specifies how the form data should be encoded-->
 
       <!-- user -->
       <?php include("includes/active-session.php") ?>
+
       <input type='hidden' name='user' value=' <?= $user["user_ID"] ?>'>
 
       <!-- Image -->
-      <div class="container-input">
-        <label for="file">Upload photos</label><br>
-        <input type="file" id="submit-imgPic" name="file"><br>
+      <div class="container-input container-input-file">
+        <p>Upload photos</p>
+        <!-- <label for="file">Upload photos</label><br> -->
+        <input type="file" name="file" id="file">
 
-        <!-- 
-        <button type="submit" id="submit-imgPic" name="Chose a file">Upload picture</button> -->
+        <!-- <button type="submit" id="submitImgPic" name="submit">Upload picture</button> -->
       </div>
 
       <!-- title -->
       <div class="container-input">
-        <label for="title">title</label><br>
-        <input class="text-input" type="title" id="title" name="title" placeholder="e.g. Black jeans"><br>
+        <label for="title">title</label>
+        <input class="text-input" type="title" name="title" id="title" placeholder="e.g. Black jeans">
       </div>
 
       <!-- Description -->
       <div class="container-input">
-        <label for="descript">Description</label><br>
-        <input class="text-input" type="descript" id="descript" name="descript" id="descript" placeholder="e.g. hight waist skinny jeans"><br>
+        <label for="descript">Description</label>
+        <input class="text-input" type="descript" id="descript" name="descript" placeholder="e.g. hight waist skinny jeans">
       </div>
 
 
 
       <!-- category -->
       <div class="container-input">
-        <label for="category">Category</label><br>
+        <label for="category">Category</label>
         <div>
-          <select name="category">
-
+          <select name="category" id="category">
+            <option value="">--Please choose an option--</option>
             <?php
             echo $category = $_GET["category"];
             ?>
-            <!-- <option value="">--Please choose an option--</option> -->
             <option value="women" <?php echo $category == "women" ? 'selected' : ''; ?>>women</option>
             <option value="men" <?php echo $category == "men" ? 'selected' : ''; ?>>men</option>
             <option value="kids" <?php echo $category == "kids" ? 'selected' : ''; ?>>kids</option>
@@ -126,20 +142,21 @@ error_reporting(E_ALL);
 
       <!-- brand -->
       <div class="container-input">
-        <label for="brand">Brand</label><br>
-        <input class="text-input" type="brand" name="brand" id="brand" placeholder="e.g. Lee"><br>
+        <label for="brand">Brand</label>
+        <input class="text-input" type="brand" name="brand" id="brand" placeholder="e.g. Lee">
       </div>
 
       <!-- condition -->
       <div class="container-input">
-        <label for="condition1">Condition</label><br>
-        <input class="text-input" type="condition1" name="condition1" id="condition1" placeholder="e.g. only worn a few times"><br>
+        <label for="condition1">Condition</label>
+        <input class="text-input" type="condition1" name="condition1" id="condition1" placeholder="e.g. only worn a few times">
       </div>
 
       <div class="container-input">
-        <label for="size">size</label><br>
+        <label for="size">size</label>
         <div>
-          <select name="size">
+          <select name="size" id="size">
+            <option value="">--Please select an option--</option>
             <?php
             echo $size = $_GET["size"]
             ?>
@@ -162,11 +179,12 @@ error_reporting(E_ALL);
 
       <!-- price -->
       <div class="container-input">
-        <label for="price">Price</label><br>
-        <input class="text-input" type="price" name="price" id="price" placeholder="e.g £11"><br>
+        <label for="price">Price</label>
+        <input class="text-input" type="price" name="price" id="price" placeholder="e.g £11">
       </div>
 
-      <button type="submit" class="btn btn-info">Upload</button>
+
+      <button type="submit" id="uploadItem" name="submit" class="btn btn-info">Upload</button>
 
     </form>
   </main>
