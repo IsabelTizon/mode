@@ -65,7 +65,7 @@ error_reporting(E_ALL);
 
   <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
 
-  <script src="./js/validation-sell.js" defer></script>
+  <script src="./js/validation-edit.js" defer></script>
 
 
   <?php include('includes/dbconx.php');
@@ -85,22 +85,26 @@ error_reporting(E_ALL);
 
   <!-- main content data  -->
   <main class="index-sell">
-    <h1 class="sell-page-title">Sell an item</h1>
+    <h1 class="sell-page-title">Edit your item</h1>
 
 
-    <form class="sell-form" action="process-sell.php" method="get" id="formSell" enctype="multipart/form-data" novalidate>
+
+    <!-- form -->
+    <form class="sell-form" action="process-edit.php" method="GET" id="formEdit" enctype="multipart/form-data" novalidate>
       <!-- enctype: specifies how the form data should be encoded-->
 
       <!-- user -->
       <?php include("includes/active-session.php") ?>
 
       <input type='hidden' name='user' value=' <?= $user["user_ID"] ?>'>
+      <input type='hidden' name='order' value=' <?= $order["order_ID"] ?>'>
+
 
       <!-- Image -->
       <div class="container-input container-input-file">
         <p>Upload photos</p>
         <!-- <label for="file">Upload photos</label><br> -->
-        <input type="file" name="file" id="file">
+        <input type="file" name="file" id="file" value="<?php $row['itemPic'] ?>">
 
         <!-- <button type="submit" id="submitImgPic" name="submit">Upload picture</button> -->
       </div>
@@ -108,13 +112,13 @@ error_reporting(E_ALL);
       <!-- title -->
       <div class="container-input">
         <label for="title">title</label>
-        <input class="text-input" type="title" name="title" id="title" placeholder="e.g. Black jeans">
+        <input class="text-input" type="title" name="title" id="title">
       </div>
 
       <!-- Description -->
       <div class="container-input">
         <label for="descript">Description</label>
-        <input class="text-input" type="descript" id="descript" name="descript" placeholder="e.g. hight waist skinny jeans">
+        <input class="text-input" type="descript" id="descript" name="descript">
       </div>
 
 
@@ -161,8 +165,8 @@ error_reporting(E_ALL);
             echo $size = $_GET["size"]
             ?>
             <option <?php echo $size == "on size" ? 'selected' : ''; ?>>one size</option>
-            <option <?php echo $size == "xs" ? 'selected' : ''; ?>>xs</option>
-            <option <?php echo $size == "s" ? 'selected' : ''; ?>>s</option>
+            <option <?php echo $size == "xs" ? 'selected' : ''; ?>>XS</option>
+            <option <?php echo $size == "s" ? 'selected' : ''; ?>>S</option>
             <option <?php echo $size == "M" ? 'selected' : ''; ?>>M</option>
             <option <?php echo $size == "L" ? 'selected' : ''; ?>>L</option>
             <option <?php echo $size == "XL" ? 'selected' : ''; ?>>XL</option>
@@ -183,8 +187,7 @@ error_reporting(E_ALL);
         <input class="text-input" type="price" name="price" id="price" placeholder="e.g £11">
       </div>
 
-
-      <button type="submit" id="uploadItem" name="submitSell" class="btn btn-info">Upload</button>
+      <button type="submit" id="uploadItem" name="submitEdit" class="btn btn-info">Upload</button>
 
     </form>
   </main>

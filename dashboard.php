@@ -71,8 +71,11 @@ error_reporting(E_ALL);
                     echo '<div class="card-item">';
                     echo '<a href="item-page.php?ID=' . $row['order_ID'] . '"><img class="card-img-top" alt="item picture" src=' . '"media/items/photos/' . $row['itemPic'] . '"' . '></a>';
                     echo '<div class="card-body body-btn-dashboard">';
-                    echo '<a href="update.php"><button class="btn btn-dashboard btn-dashboard-edit">Edit</button></a>';
-                    echo '<a href="delete.php"><button class="btn btn-dashboard btn-dashboard-delete">Delete</button></a>';
+                    //Edit btn
+                    echo '<a href="edit.php?order='  . $row['order_ID'] . '?user='  . $row['user_ID'] . ' "><button class="btn btn-dashboard btn-dashboard-edit">Edit</button></a>';
+
+                    //Delete btn
+                    echo '<a href="delete.php?order='  . $row['order_ID'] . '?user='  . $row['user_ID'] . ' "><button class="btn btn-dashboard btn-dashboard-delete">Delete</button></a>';
                     echo '</div>';
                     echo '</div>';
                 }

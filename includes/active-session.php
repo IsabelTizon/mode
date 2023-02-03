@@ -34,3 +34,10 @@ if (isset(($_SESSION)['user_id'])) {
     $result = $conn->query($sql);
     $user = $result->fetch_assoc();
 }
+
+if (isset(($_SESSION)['order'])) {
+    $sql = "SELECT * FROM itemsMode WHERE order_ID = {$_SESSION["order"]}";
+
+    $result = $conn->query($sql);
+    $user = $result->fetch_assoc();
+}
