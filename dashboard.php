@@ -75,7 +75,7 @@ error_reporting(E_ALL);
                     echo '<a href="edit.php?order='  . $row['order_ID'] . '?user='  . $row['user_ID'] . ' "><button class="btn btn-dashboard btn-dashboard-edit">Edit</button></a>';
 
                     //Delete btn
-                    echo '<a href="delete.php?order='  . $row['order_ID'] . '?user='  . $row['user_ID'] . ' "><button class="btn btn-dashboard btn-dashboard-delete">Delete</button></a>';
+                    echo '<a href="confirmation-delete.php?order='  . $row['order_ID'] . '?user='  . $row['user_ID'] . ' "><button class="btn btn-dashboard btn-dashboard-delete">Delete</button></a>';
                     echo '</div>';
                     echo '</div>';
                 }
