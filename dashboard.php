@@ -63,28 +63,32 @@ error_reporting(E_ALL);
 
 
                 //DISPLAYING DATABASE WITH BOOTSTRAP CARDS
-                echo '<div class="section-card-items-home">';
-                while ($row = $result->fetch_assoc()) { //fetches one row of data from the results set. Continues until there are no more rows
+                if ($result->num_rows > 0) {
+                    echo '<div class="section-card-items-home">';
+                    while ($row = $result->fetch_assoc()) { //fetches one row of data from the results set. Continues until there are no more rows
 
 
 
-                    echo '<div class="card-item">';
-                    echo '<a href="item-page.php?ID=' . $row['order_ID'] . '"><img class="card-img-top" alt="item picture" src=' . '"media/items/photos/' . $row['itemPic'] . '"' . '></a>';
-                    echo '<div class="card-body body-btn-dashboard">';
-                    //Edit btn
-                    echo '<a href="edit.php?order='  . $row['order_ID'] . '?user='  . $row['user_ID'] . ' "><button class="btn btn-dashboard btn-dashboard-edit">Edit</button></a>';
+                        echo '<div class="card-item">';
+                        echo '<a href="item-page.php?ID=' . $row['order_ID'] . '"><img class="card-img-top" alt="item picture" src=' . '"media/items/photos/' . $row['itemPic'] . '"' . '></a>';
+                        echo '<div class="card-body body-btn-dashboard">';
+                        //Edit btn
+                        echo '<a href="edit.php?order=' . $row['order_ID'] . '?user=' . $row['user_ID'] . ' "><button class="btn btn-dashboard btn-dashboard-edit">Edit</button></a>';
 
-                    //Delete btn
-                    echo '<a href="confirmation-delete.php?order='  . $row['order_ID'] . '?user='  . $row['user_ID'] . ' "><button class="btn btn-dashboard btn-dashboard-delete">Delete</button></a>';
+                        //Delete btn
+                        echo '<a href="confirmation-delete.php?order=' . $row['order_ID'] . '?user=' . $row['user_ID'] . ' "><button class="btn btn-dashboard btn-dashboard-delete">Delete</button></a>';
+                        echo '</div>';
+                        echo '</div>';
+                    }
+
                     echo '</div>';
-                    echo '</div>';
+                    $stmt->close(); // close sql statement
+                    $conn->close(); // close dbase connection
+                } else {
+                    echo '<p style="font-size:20px;width:50%;margin:12% auto;text-align:center;" class="card-text">You don\'t have any item yet</p>';
                 }
-
-                echo '</div>';
-                $stmt->close(); // close sql statement
-                $conn->close(); // close dbase connection
-
             }
+
             ?>
         </div>
 
@@ -92,7 +96,7 @@ error_reporting(E_ALL);
     </main>
 
     <!-- Footer data  -->
-    <footer>=
+    <footer>
         <?php include("modules/footer.php"); ?>
     </footer>
 
