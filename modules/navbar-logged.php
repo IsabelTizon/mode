@@ -39,7 +39,7 @@ include('includes/active-session.php');
             <a class="dropdown-item" href="logout.php">Logged out</a>
         </div>
     </div>
-    <span class="material-symbols-outlined">favorite</span>
+    <a style="width: 60px;" href="favourites.php"><span class="material-symbols-outlined">favorite</span></a>
     </div>
     <button type="button" class="btn btn-sell" onclick=" sellNow()">Sell now</button>
 </nav>
