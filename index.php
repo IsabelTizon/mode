@@ -4,7 +4,7 @@ session_start();
 
 // print_r($_SESSION); //print out the sesion array ej: Array ( [user_id] => 1 )
 
-// Including error reporting file and config file
+// Including error reporting and config files
 include("includes/error-reporting.php");
 include("includes/config.php");
 ?>
@@ -28,7 +28,7 @@ error_reporting(E_ALL);
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/view-records.css">
 
-  <!-- Including database conexion and head content -->
+  <!-- Including database conexion and head content files -->
   <?php include('includes/dbconx.php');
   include("modules/head-content.php"); ?>
 
@@ -83,7 +83,7 @@ error_reporting(E_ALL);
 
   <!-- Footer data  -->
   <footer>
-    <!-- Including footer -->
+    <!-- Including footer file -->
     <?php include("modules/footer.php"); ?>
   </footer>
 
