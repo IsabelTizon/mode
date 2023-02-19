@@ -13,7 +13,7 @@ $order = $_GET['order'];
 // echo '</br>';
 // print_r($order);
 
-//Inserting the variables that I got (user and order) into the database
+//Inserting the variables that I got (user and order) into favourites table
 $sql = "INSERT INTO favorites (user_ID, order_ID) VALUES ($user, $order)";
 echo $sql;
 $stmt = $conn->stmt_init();

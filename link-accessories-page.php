@@ -5,7 +5,8 @@ session_start();
 // Including error reporting, config and active session files.
 include("includes/active_session.php");
 include("includes/error-reporting.php");
-include("includes/config.php"); ?>
+include("includes/config.php");
+?>
 
 <!doctype html>
 <html lang="en">
@@ -52,7 +53,7 @@ error_reporting(E_ALL);
             if ($stmt = $conn->prepare("SELECT * FROM itemsMode WHERE category='accessories'")) {
 
                 $stmt->execute(); // execute sql statement
-                $result = $stmt->get_result();
+                $result = $stmt->get_result(); //returns the results from sql statement
 
                 //If there is data in that column show it in cards
                 if ($result->num_rows > 0) {
