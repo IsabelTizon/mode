@@ -1,4 +1,5 @@
 <?php
+// Including database and error reporting files.
 include("includes/dbconx.php");
 include("includes/error-reporting.php");
 
@@ -49,22 +50,25 @@ if (!filter_has_var(INPUT_POST, 'checkbox_age')) {
 
 
 
-//inserting input in the database
+// inserting inputs in the database users
 $sql = "INSERT INTO users (username, email, password_hash) VALUES (?, ?, ?)";
 
+//Initialize a statement to return an object representing the conexion with the database
 $stmt = $conn->stmt_init();
 
 if (!$stmt->prepare($sql)) {
     die("SQL error: " . $conn->error);
 }
 
+//Binding the inputs in the database
 $stmt->bind_param("sss", $_POST["username"], $_POST["email"], $password_hash);
 
-
+// After sign up go to login page
 if ($stmt->execute()) {
     header("Location: login.php");
     exit;
 } else {
+    // or die if the email is already taken or there is another problem
     if ($conn->error) {
         die("email is already taken");
     } else {
