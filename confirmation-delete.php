@@ -1,19 +1,16 @@
 <?php
+//session is started
 session_start();
 
 // print_r($_SESSION); //print out the sesion array ej: Array ( [user_id] => 1 )
 
-
-
+// Including error reporting and config files.
 include("includes/error-reporting.php");
 include("includes/config.php");
-
-
 ?>
 
 
 <!doctype html>
-
 <html lang="en">
 
 <?php
@@ -26,9 +23,12 @@ error_reporting(E_ALL);
 <!-- Head data -->
 
 <head>
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/view-records.css">
 
+    <!-- Internal CSS -->
+    <!-- I resorted to the internal css because the external did not change the styles  -->
     <style>
         .confirmation-delete {
             width: 40%;
@@ -58,8 +58,6 @@ error_reporting(E_ALL);
             margin: auto;
         }
 
-
-
         .btn.btn-purple {
             border-color: #712296;
             background-color: #ffffff;
@@ -70,17 +68,21 @@ error_reporting(E_ALL);
 
         }
     </style>
+
+    <!-- Including database conexion and head content files -->
     <?php include('includes/dbconx.php');
     include("modules/head-content.php"); ?>
 </head>
 
 <body>
     <header>
+        <!-- Including navbar logged -->
         <?php include("modules/navbar-logged.php"); ?>
     </header>
 
     <!-- main content data  -->
     <main>
+        <!-- Deleting confirmation -->
         <div class="confirmation-delete">
             <p class="title-confirmation-delete">Are you sure you want to delete this item?</p>
             <div class="btns-confimation-delete">
@@ -88,14 +90,13 @@ error_reporting(E_ALL);
 
                 <a href="dashboard.php"><button class="btn btn-dashboard btn-purple">No</button></a>
             </div>
-
-
         </div>
 
     </main>
 
     <!-- Footer data  -->
     <footer>
+        <!-- Including footer file -->
         <?php include("modules/footer.php"); ?>
     </footer>
 
