@@ -43,8 +43,8 @@ error_reporting(E_ALL);
             <h1 class="title-dashboard">My favorite items</h1>
             <?php
 
-
-            if ($stmt = $conn->prepare("SELECT * favorites")) {
+            $user = $_SESSION["user_id"];
+            if ($stmt = $conn->prepare("SELECT itemsMode.order_ID, itemsMode.itemPic, itemsMode.descript, itemsMode.brand, itemsMode.size, itemsMode.price FROM itemsMode INNER JOIN favorites ON favorites.order_ID = itemsMode.order_ID WHERE favorites.user_ID = $user")) {
                 $stmt->execute(); // execute sql statement
                 $result = $stmt->get_result(); //returns the results from sql statement
 
@@ -60,12 +60,12 @@ error_reporting(E_ALL);
                         echo '<a href="item-page.php?ID=' . $row['order_ID'] . '"><img class="card-img-top" alt="item picture" src=' . '"media/items/photos/' . $row['itemPic'] . '"' . '></a>';
                         echo '<div class="card-body"></a>';
                         echo '<div class="display-title-favorite">';
-                        echo '<h6 class="card-title">£' . $row['itemsMode.price'] . '</h6>';
-                        echo '<span class="material-symbols-outlined">favorite</span>';
+                        echo '<h6 class="card-title">£' . $row['price'] . '</h6>';
+                        echo '<span class="material-symbols-outlined">delete</span>';
                         echo '</div>';
-                        echo '<p class="card-text">' . $row['itemsMode.brand'] . '</p>';
-                        echo '<p class="card-text">' . $row['itemsMode.descript'] . '</p>';
-                        echo '<p class="card-text">size ' . $row['itemsMode.size'] . '</p>';
+                        echo '<p class="card-text">' . $row['brand'] . '</p>';
+                        echo '<p class="card-text">' . $row['descript'] . '</p>';
+                        echo '<p class="card-text">size ' . $row['size'] . '</p>';
                         echo '</div>';
                         echo '</div>';
                     }

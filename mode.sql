@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Feb 06, 2023 at 03:25 PM
+-- Generation Time: Feb 08, 2023 at 03:10 PM
 -- Server version: 5.7.34
 -- PHP Version: 7.4.21
 
@@ -20,6 +20,31 @@ SET time_zone = "+00:00";
 --
 -- Database: `mode`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `favorites`
+--
+
+CREATE TABLE `favorites` (
+  `fav_ID` int(11) NOT NULL,
+  `user_ID` int(11) NOT NULL,
+  `order_ID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `favorites`
+--
+
+INSERT INTO `favorites` (`fav_ID`, `user_ID`, `order_ID`) VALUES
+(1, 1, 15),
+(2, 1, 15),
+(3, 1, 15),
+(4, 1, 17),
+(5, 3, 17),
+(6, 2, 17),
+(7, 2, 16);
 
 -- --------------------------------------------------------
 
@@ -84,6 +109,14 @@ INSERT INTO `users` (`user_ID`, `username`, `email`, `password_hash`) VALUES
 --
 
 --
+-- Indexes for table `favorites`
+--
+ALTER TABLE `favorites`
+  ADD PRIMARY KEY (`fav_ID`),
+  ADD KEY `user_ID` (`user_ID`),
+  ADD KEY `order_ID` (`order_ID`);
+
+--
 -- Indexes for table `itemsMode`
 --
 ALTER TABLE `itemsMode`
@@ -102,6 +135,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `favorites`
+--
+ALTER TABLE `favorites`
+  MODIFY `fav_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT for table `itemsMode`
 --
 ALTER TABLE `itemsMode`
@@ -116,6 +155,13 @@ ALTER TABLE `users`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `favorites`
+--
+ALTER TABLE `favorites`
+  ADD CONSTRAINT `favorites_ibfk_1` FOREIGN KEY (`user_ID`) REFERENCES `users` (`user_ID`),
+  ADD CONSTRAINT `favorites_ibfk_2` FOREIGN KEY (`order_ID`) REFERENCES `itemsMode` (`order_ID`);
 
 --
 -- Constraints for table `itemsMode`
