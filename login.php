@@ -51,12 +51,15 @@ error_reporting(E_ALL);
 
                 <!-- Form: email and password to log in -->
                 <form method="post">
+                    <!-- email -->
                     <label for="email">Email</label><br>
                     <input type="email" name="email" id="email" value="<?= htmlspecialchars($_POST['email'] ?? "") ?>"><br>
 
+                    <!-- password -->
                     <label for="password">Password</label><br>
                     <input type="password" name="password" id="password"><br>
 
+                    <!-- Button to submit -->
                     <button class="btn btn-info">Continue</button>
                 </form>
             </div>

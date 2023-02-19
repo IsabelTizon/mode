@@ -3,6 +3,7 @@ session_start();
 
 // print_r($_SESSION); //print out the sesion array ej: Array ( [user_id] => 1 )
 
+// Including active sessiion, database conexion, error reporting and config files.
 include("includes/active_session.php");
 include("includes/dbconx.php");
 include("includes/error-reporting.php");
@@ -25,9 +26,11 @@ error_reporting(E_ALL);
 <!-- Head data -->
 
 <head>
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/sell.css">
 
+  <!-- Internal CSS because they sid not work external -->
   <style>
     main.index-sell {
       width: 50% !important;
@@ -67,7 +70,7 @@ error_reporting(E_ALL);
 
   <script src="./js/validation-sell.js" defer></script>
 
-
+  <!-- Including database conexion and head content files -->
   <?php include('includes/dbconx.php');
   include("modules/head-content.php"); ?>
 </head>
@@ -75,9 +78,12 @@ error_reporting(E_ALL);
 <body>
   <header>
     <?php
+    //condition with isset() to check if the session is start
     if (isset($_SESSION["user_id"])) {
+      //If the saession is start include navbar logged file
       include("modules/navbar-logged.php");
     } else {
+      // if not, include navbar
       include("modules/navbar.php");
     }
     ?>
@@ -183,7 +189,7 @@ error_reporting(E_ALL);
         <input class="text-input" type="price" name="price" id="price" placeholder="e.g £11">
       </div>
 
-
+      <!-- Button to submit -->
       <button type="submit" id="uploadItem" name="submitSell" class="btn btn-info">Upload</button>
 
     </form>
@@ -191,6 +197,7 @@ error_reporting(E_ALL);
 
   <!-- Footer data  -->
   <footer>
+    <!-- Including footer file -->
     <?php include("modules/footer.php"); ?>
   </footer>
 

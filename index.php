@@ -58,7 +58,7 @@ error_reporting(E_ALL);
     <?php
     //condition with isset() to check if the session is start
     if (isset($_SESSION["user_id"])) {
-      //If the saession is start include hero logged file
+      //If the session is start include hero logged file
       include("modules/hero-logged.php");
     } else {
       // if not, include hero
