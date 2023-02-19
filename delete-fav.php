@@ -1,9 +1,10 @@
 <?php
-
+//session is started
 session_start();
 
+// Including error reporting, database conexion and active session files.
 include("includes/active_session.php");
-include("includes/dbconx.php"); //Database conexion
+include("includes/dbconx.php");
 include("includes/error-reporting.php");
 
 
@@ -18,7 +19,7 @@ if ($stmt = $conn->prepare("SELECT * FROM favorites WHERE user_ID = {$_SESSION["
         echo '<p>your order is: ' . $row['order_ID'] . '</p>';
         $order = $row['order_ID'];
 
-
+        // Deleting from the database favourites table the product selected
         $sql = "DELETE FROM favorites WHERE order_ID =  '$order'";
 
         $stmt = $conn->stmt_init(); //Initialize a statement and return an object to use with stmt_prepare():
@@ -29,11 +30,12 @@ if ($stmt = $conn->prepare("SELECT * FROM favorites WHERE user_ID = {$_SESSION["
 
         if ($conn->query($sql) === TRUE) {
             echo "Record updated successfully";
+            // If the product is deleted go to favourites page
             header("Location: favourites.php");
         } else {
             echo "Error updating record: " . $conn->error;
         }
 
-        $conn->close();
+        $conn->close(); // close dbase connection
     }
 }
