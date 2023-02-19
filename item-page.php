@@ -1,4 +1,5 @@
 <?php
+//session is started
 session_start();
 
 // Including error reporting, config and active session files.
