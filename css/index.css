@@ -9,6 +9,7 @@ video {
 	left: 0;
 }
 
+/* Give a second life container */
 .container-sell {
 	padding: 15px;
 	display: flex;
@@ -23,32 +24,42 @@ video {
 	background-color: #fff;
 	border-radius: 5px;
 }
+
+/* Give a second life title*/
 .text-hero {
 	text-align: left;
 	color: #000000;
 }
+
+/* sell now btn Give a second life container */
 .btn-sell-hero {
 	color: #ffffff !important;
 	background-color: #712296 !important;
 	width: 100%;
 	margin: auto;
 }
+
+/* learn how it works link in Give a second life container */
 .text-link-hero {
 	text-align: left;
 	color: #000000;
 	font-size: 14px;
 }
+
+/* learn how it works link hover in Give a second life container */
 .text-link-hero:hover {
 	color: #712296;
 	font-size: 14px;
 	text-decoration: none;
 }
 
-/* Records */
+/* Records (product cards section) width */
 .records-home {
 	width: 80%;
 	margin: 30px auto;
 }
+
+/* product cards container */
 .section-card-items-home {
 	display: flex;
 	flex-wrap: wrap;
@@ -56,29 +67,43 @@ video {
 	width: 80%;
 	margin: 20px auto;
 }
+
+/* card */
 .card-item {
 	margin: 10px 10px 30px;
 	width: 22%;
 }
+
+/* img card */
 .card-img-top {
 	width: 100%;
 	border-radius: 5px;
 }
+
+/* card body */
 .card-body {
 	padding: 3px 0 0 0 !important;
 }
+
+/* price and favourite container */
 .display-title-favorite {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
+
+/* card title */
 .card-title {
 	margin: 0;
 	font-weight: bold;
 }
+
+/* favourite icon */
 .material-symbols-outlined {
 	color: #f00606;
 }
+
+/* card text */
 .card-text {
 	font-size: 14px;
 	display: -webkit-box;

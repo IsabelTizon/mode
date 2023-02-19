@@ -59,7 +59,7 @@ error_reporting(E_ALL);
                 echo '<div class="det-record">';
                 while ($row = $result->fetch_assoc()) { //fetches one row of data from the results set. Continues until there are no more rows
 
-                    //Item Cards 
+                    //Card 
                     echo '<img class="img-record" alt="item picture" src=' . '"media/items/photos/' . $row['itemPic'] . '"' . '>';
 
                     echo '<div class="container-det">';

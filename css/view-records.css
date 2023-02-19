@@ -1,3 +1,4 @@
+/* cards container */
 .section-card-items-home {
 	display: flex;
 	flex-wrap: wrap;
@@ -5,31 +6,43 @@
 	width: 80%;
 	margin: 20px auto;
 }
+
+/* card */
 .card-item {
 	margin: 10px 10px 30px;
 	width: 22%;
 }
 
+/* img card*/
 .card-img-top {
 	width: 100%;
 	border-radius: 5px;
 }
+
 a {
 	width: 100%;
 	border-radius: 5px;
 }
+
+/* price and favourite container */
 .display-title-favorite {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
+
+/* card title */
 .card-title {
 	margin: 0;
 	font-weight: 900;
 }
+
+/* favourite icon */
 .material-symbols-outlined {
 	color: #f00606;
 }
+
+/* card text */
 .card-text {
 	font-size: 14px;
 	display: -webkit-box;

@@ -1,22 +1,23 @@
+/*Title: My Items*/
 .title-dashboard {
 	width: 80%;
 	margin: 40px auto 30px;
 }
+
+/* Edit and delete btns container */
 .card-body.body-btn-dashboard {
 	display: flex;
 	flex-direction: column;
 }
-.btn.btn-dashboard {
-	background-color: #712296;
-	color: #ffffff;
-	font-size: 14px;
-	width: 100%;
-}
+
+/* edit btn*/
 .btn.btn-dashboard.btn-dashboard-edit {
 	background-color: #d8e8fa;
 	color: #000000;
 	margin-top: 5px;
 }
+
+/* delete btn */
 .btn.btn-dashboard.btn-dashboard-delete {
 	background-color: #fad8d8;
 	color: #000000;

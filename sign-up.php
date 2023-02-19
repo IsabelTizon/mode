@@ -21,6 +21,38 @@ error_reporting(E_ALL);
     <link rel="stylesheet" href="css/welcome.css">
     <!-- Including database conexion and head content files -->
 
+    <!-- Internal styles -->
+    <!-- External didn't works -->
+    <style>
+        .container-sell {
+            padding: 25px;
+            height: 65vh;
+            bottom: 10%;
+        }
+
+        .checkbox-age {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .input-signUp {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        .text-checkbox {
+            font-size: 11px;
+            margin-top: 30px;
+            margin-left: 10px;
+        }
+
+        .btn-continue-signUp {
+            width: 100%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+
     <?php include('includes/dbconx.php');
     include("modules/head-content.php"); ?>
 
@@ -56,36 +88,36 @@ error_reporting(E_ALL);
                     <!-- User name -->
                     <div>
                         <label for="username">User name</label><br>
-                        <input type="text" id="username" name="username"><br>
+                        <input class="input-signUp" type="text" id="username" name="username"><br>
                     </div>
                     <!-- email -->
                     <div>
                         <label for="email">Email</label><br>
-                        <input type="password" id="email" name="email" id="email"><br>
+                        <input class="input-signUp" type="password" id="email" name="email" id="email"><br>
                     </div>
 
 
                     <!-- password -->
                     <div>
                         <label for="password">Password</label><br>
-                        <input type="password" name="password" id="password"><br>
+                        <input class="input-signUp" type="password" name="password" id="password"><br>
                     </div>
 
 
                     <!-- Repeat password -->
                     <div>
                         <label for="password_confirmation">Repeat password</label><br>
-                        <input type="password" name="password_confirmation" id="password_confirmation"><br>
+                        <input class="input-signUp" type="password" name="password_confirmation" id="password_confirmation"><br>
                     </div>
 
                     <!-- Check box to confirm that is over  18 years old -->
                     <div class="checkbox-age">
                         <input type="checkbox" name="checkbox_age" id="checkbox_age" value="yes" />
-                        <label for="checkbox_age">By registering, Y confirm that I accept Mode Terms and conditions and I have read the Privacy Policy and I am at least 18 years old.</label>
+                        <label class="text-checkbox" for="checkbox_age">By registering, I confirm that I accept Mode Terms and conditions and I have read the Privacy Policy and I am at least 18 years old.</label>
                     </div>
 
                     <!-- Button to submit -->
-                    <button type="submit" class="btn btn-info">Continue</button>
+                    <button type="submit" class="btn btn-info btn-continue-signUp">Continue</button>
 
                 </form>
             </div>

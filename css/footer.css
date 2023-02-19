@@ -1,4 +1,4 @@
-/* media and cards footer */
+/* media and cards footer container */
 .container-media-cards {
 	background-color: #ffffff;
 	display: flex;
@@ -8,43 +8,50 @@
 	width: 40%;
 	margin: 0 auto;
 }
+
+/* social media */
 .link-media {
 	width: 40px;
 	height: 40px;
 }
-.vl {
-	border-left: 1px solid #d9d9d9;
-	height: 30px;
-	margin: 10px 30px 0;
-}
+
+/* credit cards*/
 .link-card {
 	width: 55px;
 	height: 48px;
 	margin-left: 5px;
 }
 
-/* links footer */
+/* links footer container */
 .container-footer {
 	background-color: #d9d9d9;
 	display: flex;
 	flex-direction: row;
 }
+
+/* individual column link footer */
 .section-links-footer {
 	padding: 3%;
 	width: 35%;
 	display: flex;
 	flex-direction: column;
 }
+
+/* title of each footer column*/
 .title-section-footer {
 	font-weight: bold;
 	font-size: 16px;
 	letter-spacing: 2px;
 }
+
+/* link footer style*/
 .link-footer {
 	font-size: 13px;
 	letter-spacing: 1px;
 	color: #000000;
 }
+
+/* links hoover*/
 .link-footer:hover {
 	color: #712296;
 	text-decoration: none;

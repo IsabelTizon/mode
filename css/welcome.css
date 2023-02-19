@@ -1,3 +1,4 @@
+/* video hero */
 video {
 	object-fit: cover;
 	height: 80vh;
@@ -8,6 +9,7 @@ video {
 	left: 0;
 }
 
+/* Give a second life container */
 .container-sell {
 	padding: 15px;
 	display: flex;
@@ -22,19 +24,14 @@ video {
 	background-color: #fff;
 	border-radius: 5px;
 }
-.text-welcome {
-	align-items: center;
-}
 
-/* button.btn.btn-login {
-	background-color: #712296 !important;
-	color: #ffffff;
-	font-size: 14px;
-} */
+/* Link sign up on Give a second life container */
 .link-signUp {
 	color: #712296;
 	padding-left: 10px;
 }
+
+/* Link sign up hover on Give a second life container */
 .link-signUp:hover {
 	text-decoration: none;
 }

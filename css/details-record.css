@@ -1,36 +1,53 @@
+/* page width */
 .record {
 	width: 60%;
 	margin: 50px auto;
 }
+
+/* card container */
 .det-record {
 	display: flex;
 	flex-direction: row;
 }
+
+/* container text */
 .container-det {
 	display: flex;
 	flex-direction: column;
 	margin-left: 15%;
 }
+
+/* img */
 img.img-record {
 	width: 33%;
 	height: 400px;
 	border-radius: 5px;
 }
+
+/* price */
 .det-price {
 	margin-bottom: 50px;
 }
+
+/* colour text */
 .det {
 	color: #000000;
 }
+
+/* favorite icon container*/
 .display-btnBuy-favorite {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	margin-top: 80px;
 }
+
+/* favorite icon colour */
 .favorite-icon {
 	color: rgb(255, 0, 0);
 }
+
+/* buy now button */
 .btn-purple {
 	background-color: #712296 !important;
 	color: #ffffff !important;

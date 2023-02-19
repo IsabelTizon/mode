@@ -1,8 +1,11 @@
-/* Navbar 1 */
+/* Navbar 1 with the logo */
+/* Navbar */
 .navbar {
 	background-color: #ffffff;
 	border-bottom: 1px solid #cfc9c9;
 }
+
+/* logo */
 .navbar-brand {
 	margin-right: 0;
 	width: 7%;
@@ -14,6 +17,7 @@
 	width: 100px;
 	height: 45px;
 }
+
 /* search */
 .form-search {
 	width: 80%;
@@ -24,6 +28,8 @@
 	width: 85% !important;
 	margin-left: 2%;
 }
+
+/* sell now btn */
 .btn-sell {
 	background-color: #712296;
 	color: #ffffff;
@@ -32,6 +38,8 @@
 .btn-sell:hover {
 	color: #ffffff;
 }
+
+/* signUp login btn */
 .btn-signUp-login {
 	background-color: #ffffff;
 	color: #000000;
@@ -40,7 +48,7 @@
 	margin-right: 2%;
 }
 
-/* Navbar 2 */
+/* Navbar 2 with the 8 product categories */
 .section-links-navbar {
 	display: flex;
 	flex-direction: row;
