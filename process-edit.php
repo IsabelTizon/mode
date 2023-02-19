@@ -1,7 +1,8 @@
 <?php
-
+// activating the session
 session_start();
 
+// Including error reporting, config and active session files.
 include("includes/active_session.php");
 include("includes/dbconx.php"); //Database conexion
 include("includes/error-reporting.php");
@@ -27,6 +28,8 @@ if ($stmt = $conn->prepare("SELECT * FROM itemsMode WHERE user_ID = {$_SESSION["
         $size = $_GET["size"];
         $price = $_GET["price"];
 
+
+        //Updating a particular product
         $sql = "UPDATE itemsMode SET itemPic = '$file', title = '$title', descript = '$descript', category = '$category', brand = '$brand', condition1 = '$condition1', size = '$size', price ='$price' WHERE order_ID =  '$order'";
 
         $stmt = $conn->stmt_init(); //Initialize a statement and return an object to use with stmt_prepare():
@@ -35,6 +38,7 @@ if ($stmt = $conn->prepare("SELECT * FROM itemsMode WHERE user_ID = {$_SESSION["
             die("SQL error: " . $conn->error);
         }
 
+        //If the record is successfully update go to dashboard
         if ($conn->query($sql) === TRUE) {
             echo "Record updated successfully";
             header("Location: dashboard.php");
@@ -42,6 +46,7 @@ if ($stmt = $conn->prepare("SELECT * FROM itemsMode WHERE user_ID = {$_SESSION["
             echo "Error updating record: " . $conn->error;
         }
 
+        //closing the conexion with the database 
         $conn->close();
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-// Including error reporting, config and active session files.
+// Including active session, database conexion and error reporting files.
 include("includes/active_session.php");
 include("includes/dbconx.php"); //Database conexion
 include("includes/error-reporting.php");
