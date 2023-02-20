@@ -17,8 +17,8 @@ if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
 }
 
 //Validating the password
-if (strlen($_POST["password"]) < 6) { // strlen: string length function
-    die("Password must be at least 6 characters");
+if (strlen($_POST["password"]) < 8) { // strlen: string length function
+    die("Password must be at least 8 characters");
 }
 
 //Validating if the password has letters

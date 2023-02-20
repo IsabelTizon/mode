@@ -34,12 +34,11 @@ img.img-record {
 	color: #000000;
 }
 
-/* favorite icon container*/
-.display-btnBuy-favorite {
+.favForm {
+	margin-top: 80px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	margin-top: 80px;
 }
 
 /* favorite icon colour */

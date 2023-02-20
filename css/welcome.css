@@ -35,3 +35,7 @@ video {
 .link-signUp:hover {
 	text-decoration: none;
 }
+
+.just-validate-error-label {
+	font-size: 11px;
+}

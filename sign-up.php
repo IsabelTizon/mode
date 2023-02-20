@@ -25,9 +25,11 @@ error_reporting(E_ALL);
     <!-- External didn't works -->
     <style>
         .container-sell {
+            width: 50%;
             padding: 25px;
-            height: 65vh;
+            height: 70vh;
             bottom: 10%;
+            left: 25%;
         }
 
         .checkbox-age {

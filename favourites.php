@@ -31,6 +31,22 @@ error_reporting(E_ALL);
     <!-- Including database conexion and head content files -->
     <?php include('includes/dbconx.php');
     include("modules/head-content.php"); ?>
+
+    <style>
+        /* price and favourite container */
+        .display-title-favorite {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        /* card title */
+        .card-title {
+            margin: 0;
+            font-weight: 900;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 
 <body>

@@ -1,11 +1,14 @@
 const validation = new JustValidate("#signUp");
 
 validation
+	//username
 	.addField("#username", [
 		{
 			rule: "required",
 		},
 	])
+
+	//emailk
 	.addField("#email", [
 		{
 			rule: "required",
@@ -26,6 +29,8 @@ validation
 			errorMessage: "email already taken",
 		},
 	])
+
+	//password
 	.addField("#password", [
 		{
 			rule: "required",
@@ -34,6 +39,8 @@ validation
 			rule: "password",
 		},
 	])
+
+	//confirmation password
 	.addField("#password_confirmation", [
 		{
 			validator: (value, fields) => {
@@ -42,11 +49,15 @@ validation
 			errorMessage: "Passwords should match",
 		},
 	])
+
+	//Checout
 	.addField("#checkbox_age", [
 		{
 			rule: "required",
 		},
 	])
+
+	//Button submit
 	.onSuccess((event) => {
 		document.getElementById("signUp").submit();
 	});

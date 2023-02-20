@@ -30,6 +30,8 @@ error_reporting(E_ALL);
         }
     </style>
 
+    </style>
+
     <!-- Including database and head content files -->
     <?php include('includes/dbconx.php');
     include("modules/head-content.php"); ?>

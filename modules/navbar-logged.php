@@ -32,8 +32,9 @@ include('includes/active-session.php');
             <a class="dropdown-item" href="#"></a>
             <a class="dropdown-item" href="#"><?= htmlspecialchars($user["username"]) ?></a>
             <a class="dropdown-item" href="dashboard.php">Dashboard</a>
-            <a class="dropdown-item" href="#">Edit Record</a>
-            <a class="dropdown-item" href="#">Delete Record</a>
+            <a class="dropdown-item" href="dashboard.php">Edit Record</a>
+            <a class="dropdown-item" href="dashboard.php">Delete Record</a>
+            <a class="dropdown-item" href="#">Purchased</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="logout.php">Logged out</a>
         </div>

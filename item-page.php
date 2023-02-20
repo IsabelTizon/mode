@@ -58,24 +58,56 @@ error_reporting(E_ALL);
 
                 echo '<div class="det-record">';
                 while ($row = $result->fetch_assoc()) { //fetches one row of data from the results set. Continues until there are no more rows
+                    if (isset($_SESSION["user_id"])) {
+                        //Card 
+                        echo '<img class="img-record" alt="item picture" src=' . '"media/items/photos/' . $row['itemPic'] . '"' . '>';
 
-                    //Card 
-                    echo '<img class="img-record" alt="item picture" src=' . '"media/items/photos/' . $row['itemPic'] . '"' . '>';
+                        echo '<div class="container-det">';
+                        echo '<h5 class="det det-price">£' . $row['price'] . '</h5>';
+                        echo '<p class="det det-brand">BRAND: ' . $row['brand'] . '</p>';
+                        echo '<p class="det det-descript">DESCRIPTION: ' . $row['descript'] . '</p>';
+                        echo '<p class="det det-size">SIZE: ' . $row['size'] . '</p>';
+                        echo '<p class="det det-condition1">CONDITION: ' . $row['condition1'] . '</p>';
 
-                    echo '<div class="container-det">';
-                    echo '<h5 class="det det-price">£' . $row['price'] . '</h5>';
-                    echo '<p class="det det-brand">BRAND: ' . $row['brand'] . '</p>';
-                    echo '<p class="det det-descript">DESCRIPTION: ' . $row['descript'] . '</p>';
-                    echo '<p class="det det-size">SIZE: ' . $row['size'] . '</p>';
-                    echo '<p class="det det-condition1">CONDITION: ' . $row['condition1'] . '</p>';
+                        //Container 2 btns: favourites and buy 
+                        echo '<div class="display-btnBuy-favorite">';
 
+                        //favourite btn
+                        echo '<form class="favForm" action="process-fav.php?=user' . $user["user_ID"] . $row["order_ID"] . '" method="get" id="formFav" enctype="multipart/form-data" novalidate>';
 
+                        echo '<input type="hidden" id="user" name="user" value=' . $user["user_ID"] . '>';  // hidden user 
 
-                    echo '<div class="display-btnBuy-favorite">';
-                    echo '<span class="material-symbols-outlined favorite-icon">favorite</span>';
-                    echo '<button type="button" class="btn btn-purple">Buy now</button>';
-                    echo '</div>';
-                    echo '</div>';
+                        echo '<input type="hidden" id="order" name="order" value=' . $row["order_ID"] . '>';  // hidden order 
+                        // I will need both values to can grab the user favourite products 
+
+                        echo '<button type="submit" value="submit" class="btn btn-add-favorite"><span class="material-symbols-outlined favorite-icon">favorite</span></button>';
+
+                        ///Buy now btn
+                        echo '<button type="button" class="btn btn-purple btn-buy">Buy now</button>';
+                        echo '</div>';
+                        echo '</div>';
+                    } else {
+                        //Card 
+                        echo '<img class="img-record" alt="item picture" src=' . '"media/items/photos/' . $row['itemPic'] . '"' . '>';
+
+                        echo '<div class="container-det">';
+                        echo '<h5 class="det det-price">£' . $row['price'] . '</h5>';
+                        echo '<p class="det det-brand">BRAND: ' . $row['brand'] . '</p>';
+                        echo '<p class="det det-descript">DESCRIPTION: ' . $row['descript'] . '</p>';
+                        echo '<p class="det det-size">SIZE: ' . $row['size'] . '</p>';
+                        echo '<p class="det det-condition1">CONDITION: ' . $row['condition1'] . '</p>';
+
+                        //Container 2 btns: favourites and buy 
+                        echo '<div class="display-btnBuy-favorite">';
+
+                        //favourite btn
+                        echo '<button type="submit" value="submit" class="btn btn-add-favorite"><span class="material-symbols-outlined favorite-icon">favorite</span></button>';
+
+                        ///Buy now btn
+                        echo '<button type="button" class="btn btn-purple btn-buy">Buy now</button>';
+                        echo '</div>';
+                        echo '</div>';
+                    }
                 }
 
                 echo '</div>';

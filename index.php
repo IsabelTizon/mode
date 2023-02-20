@@ -35,6 +35,13 @@ error_reporting(E_ALL);
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
+
+  <style>
+    /* card title */
+    .card-title {
+      margin-top: 13px;
+    }
+  </style>
 </head>
 
 

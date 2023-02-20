@@ -22,6 +22,26 @@ error_reporting(E_ALL);
 <head>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/welcome.css">
+
+    <!-- Internal styles -->
+    <!-- External didn't works -->
+    <style>
+        .container-sell {
+            padding: 20px;
+            height: 43vh;
+        }
+
+        .input-login {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .btn-login {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    </style>
+
     <!-- Including database conexion and head content files -->
     <?php include('includes/dbconx.php');
     include("modules/head-content.php"); ?>
@@ -53,14 +73,14 @@ error_reporting(E_ALL);
                 <form method="post">
                     <!-- email -->
                     <label for="email">Email</label><br>
-                    <input type="email" name="email" id="email" value="<?= htmlspecialchars($_POST['email'] ?? "") ?>"><br>
+                    <input class="input-login" type="email" name="email" id="email" value="<?= htmlspecialchars($_POST['email'] ?? "") ?>"><br>
 
                     <!-- password -->
                     <label for="password">Password</label><br>
-                    <input type="password" name="password" id="password"><br>
+                    <input class="input-login" type="password" name="password" id="password"><br>
 
                     <!-- Button to submit -->
-                    <button class="btn btn-info">Continue</button>
+                    <button class="btn btn-info btn-login">Continue</button>
                 </form>
             </div>
         </div>

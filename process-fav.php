@@ -15,7 +15,7 @@ $order = $_GET['order'];
 
 //Inserting the variables that I got (user and order) into favourites table
 $sql = "INSERT INTO favorites (user_ID, order_ID) VALUES ($user, $order)";
-echo $sql;
+// echo $sql;
 $stmt = $conn->stmt_init();
 
 if (!$stmt->prepare($sql)) {

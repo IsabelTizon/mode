@@ -26,6 +26,13 @@ error_reporting(E_ALL);
     <!-- Including database conexion and head content files -->
     <?php include('includes/dbconx.php');
     include("modules/head-content.php"); ?>
+
+    <style>
+        /* card title */
+        .card-title {
+            margin-top: 13px;
+        }
+    </style>
 </head>
 
 <body>
@@ -59,20 +66,52 @@ error_reporting(E_ALL);
                     echo '<div class="section-card-items-home">';
 
                     while ($row = $result->fetch_assoc()) { //fetches one row of data from the results set. Continues until there are no more rows
+                        if (isset($_SESSION["user_id"])) {
+                            //Card
+                            echo '<div class="card-item">';
+                            echo '<a href="item-page.php?ID=' . $row['order_ID'] . '"><img class="card-img-top" alt="item picture" src=' . '"media/items/photos/' . $row['itemPic'] . '"' . '></a>';
+                            echo '<div class="card-body"></a>';
+                            echo '<div class="display-title-favorite">';
+                            echo '<h6 class="card-title">£' . $row['price'] . '</h6>';
 
-                        //Card
-                        echo '<div class="card-item">';
-                        echo '<a href="item-page.php?ID=' . $row['order_ID'] . '"><img class="card-img-top" alt="item picture" src=' . '"media/items/photos/' . $row['itemPic'] . '"' . '></a>';
-                        echo '<div class="card-body"></a>';
-                        echo '<div class="display-title-favorite">';
-                        echo '<h6 class="card-title">£' . $row['price'] . '</h6>';
-                        echo '<span class="material-symbols-outlined">favorite</span>';
-                        echo '</div>';
-                        echo '<p class="card-text">' . $row['brand'] . '</p>';
-                        echo '<p class="card-text">' . $row['descript'] . '</p>';
-                        echo '<p class="card-text">size ' . $row['size'] . '</p>';
-                        echo '</div>';
-                        echo '</div>';
+                            //favourite
+                            echo '<form class="favForm" action="process-fav.php?=user' . $user["user_ID"] . $row["order_ID"] . '" method="get" id="formFav" enctype="multipart/form-data" novalidate>';
+
+                            echo '<input type="hidden" id="user" name="user" value=' . $user["user_ID"] . '>';  // hidden user 
+
+                            echo '<input type="hidden" id="order" name="order" value=' . $row["order_ID"] . '>';  // hidden order 
+                            // I will need both values to can grab the user favourite products 
+
+                            echo '<button type="submit" value="submit" class="btn btn-add-favorite"><span class="material-symbols-outlined">favorite</span></button>';
+                            echo '</form>';
+
+                            //Card body 
+                            echo '</div>';
+                            echo '<p class="card-text">' . $row['brand'] . '</p>';
+                            echo '<p class="card-text">' . $row['descript'] . '</p>';
+                            echo '<p class="card-text">size ' . $row['size'] . '</p>';
+                            echo '</div>';
+                            echo '</div>';
+                        } else {
+                            //Card
+                            echo '<div class="card-item">';
+                            echo '<a href="item-page.php?ID=' . $row['order_ID'] . '"><img class="card-img-top" alt="item picture" src=' . '"media/items/photos/' . $row['itemPic'] . '"' . '></a>';
+                            echo '<div class="card-body"></a>';
+                            echo '<div class="display-title-favorite">';
+                            echo '<h6 class="card-title">£' . $row['price'] . '</h6>';
+
+                            //favourite
+                            echo '<button type="submit" value="submit" class="btn btn-add-favorite"><span class="material-symbols-outlined">favorite</span></button>';
+                            echo '</form>';
+
+                            //Card body 
+                            echo '</div>';
+                            echo '<p class="card-text">' . $row['brand'] . '</p>';
+                            echo '<p class="card-text">' . $row['descript'] . '</p>';
+                            echo '<p class="card-text">size ' . $row['size'] . '</p>';
+                            echo '</div>';
+                            echo '</div>';
+                        }
                     }
 
                     echo '</div>';
