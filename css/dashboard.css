@@ -11,14 +11,14 @@
 }
 
 /* edit btn*/
-.btn.btn-dashboard.btn-dashboard-edit {
+button.btn.btn-dashboard.btn-dashboard-edit {
 	background-color: #d8e8fa;
 	color: #000000;
 	margin-top: 5px;
 }
 
 /* delete btn */
-.btn.btn-dashboard.btn-dashboard-delete {
+button.btn.btn-dashboard.btn-dashboard-delete {
 	background-color: #fad8d8;
 	color: #000000;
 	margin-top: 5px;

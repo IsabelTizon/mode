@@ -80,10 +80,10 @@ error_reporting(E_ALL);
                         echo '<div class="card-body body-btn-dashboard">';
 
                         //Edit btn
-                        echo '<a href="edit.php?order=' . $row['order_ID'] . '?user=' . $row['user_ID'] . ' "><button class="btn btn-dashboard btn-dashboard-edit">Edit</button></a>';
+                        echo '<a href="edit.php?order=' . $row['order_ID'] . '?user=' . $row['user_ID'] . ' "><button style="width:100%;" class="btn btn-dashboard btn-dashboard-edit">Edit</button></a>';
 
                         //Delete btn
-                        echo '<a href="confirmation-delete.php?order=' . $row['order_ID'] . '?user=' . $row['user_ID'] . ' "><button class="btn btn-dashboard btn-dashboard-delete">Delete</button></a>';
+                        echo '<a href="confirmation-delete.php?order=' . $row['order_ID'] . '?user=' . $row['user_ID'] . ' "><button style="width:100%;" class="btn btn-dashboard btn-dashboard-delete">Delete</button></a>';
                         echo '</div>';
                         echo '</div>';
                     }
