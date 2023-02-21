@@ -83,6 +83,8 @@ error_reporting(E_ALL);
                         echo '<div class="card-item">';
                         echo '<a href="item-page.php?ID=' . $row['order_ID'] . '"><img class="card-img-top" alt="item picture" src=' . '"media/items/photos/' . $row['itemPic'] . '"' . '></a>';
                         echo '<div class="card-body"></a>';
+
+                        // Title (price) and trash container
                         echo '<div class="display-title-favorite">';
                         echo '<h6 class="card-title">£' . $row['price'] . '</h6>';
 
