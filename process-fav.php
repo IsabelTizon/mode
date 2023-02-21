@@ -13,10 +13,10 @@ $order = $_GET['order'];
 // echo '</br>';
 // print_r($order);
 
-//Inserting the variables that I got (user and order) into favourites table
-$sql = "INSERT INTO favorites (user_ID, order_ID) VALUES ($user, $order)";
-// echo $sql;
+$sql = "INSERT INTO favorites (user_ID, order_ID) SELECT * FROM (SELECT $user, $order) AS tmp WHERE NOT EXISTS (SELECT * FROM favorites WHERE user_ID = $user && order_ID = $order)";
+echo $sql;
 $stmt = $conn->stmt_init();
+
 
 if (!$stmt->prepare($sql)) {
     die("SQL error: " . $conn->error);
