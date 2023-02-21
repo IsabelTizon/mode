@@ -50,7 +50,7 @@ error_reporting(E_ALL);
             <?php
 
             $ID =  $_GET['ID'];
-            //Selecting data from the itemsMode tablewhen the order ID  is equal to the item selected 
+            //Selecting data from the itemsMode table when the order ID  is equal to the item selected 
             if ($stmt = $conn->prepare("SELECT * FROM itemsMode WHERE order_ID='$ID'")) {
                 $stmt->execute(); // execute sql statement
                 $result = $stmt->get_result(); //getting the result
