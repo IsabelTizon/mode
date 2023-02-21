@@ -7,8 +7,11 @@ include("includes/active_session.php");
 include("includes/dbconx.php"); //Database conexion
 include("includes/error-reporting.php");
 
+$user = $_GET['user'];
+$order = $_GET['order'];
 
-if ($stmt = $conn->prepare("SELECT * FROM itemsMode WHERE user_ID = {$_SESSION["user_id"]}")) {
+
+if ($stmt = $conn->prepare("SELECT * FROM itemsMode WHERE user_ID = $user && order_ID = $order")) {
     $stmt->execute(); // execute sql statement
     $result = $stmt->get_result(); //returns the results from sql statement
 

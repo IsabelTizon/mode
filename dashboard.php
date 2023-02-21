@@ -82,6 +82,14 @@ error_reporting(E_ALL);
                         //Edit btn
                         echo '<a href="edit.php?order=' . $row['order_ID'] . '?user=' . $row['user_ID'] . ' "><button style="width:100%;" class="btn btn-dashboard btn-dashboard-edit">Edit</button></a>';
 
+                        //Picking the product to be delete it
+                        echo '<form class="favForm" action="delete.php?=user' . $user["user_ID"] . $row["order_ID"] . '" method="get" id="formFav" enctype="multipart/form-data" novalidate>';
+
+                        echo '<input type="hidden" id="user" name="user" value=' . $user["user_ID"] . '>';  // hidden user 
+
+                        echo '<input type="hidden" id="order" name="order" value=' . $row["order_ID"] . '>';  // hidden order 
+                        // I will need both values to can grab the product and delete or edi it
+
                         //Delete btn
                         echo '<a href="confirmation-delete.php?order=' . $row['order_ID'] . '?user=' . $row['user_ID'] . ' "><button style="width:100%;" class="btn btn-dashboard btn-dashboard-delete">Delete</button></a>';
                         echo '</div>';
