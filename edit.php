@@ -101,8 +101,17 @@ error_reporting(E_ALL);
       <!-- user -->
       <?php include("includes/active-session.php") ?>
 
-      <input type='hidden' name='user' value=' <?= $user["user_ID"] ?>'>
-      <input type='hidden' name='order' value=' <?= $order["order_ID"] ?>'>
+      <?php $user = $_GET['user'];
+      $order = $_GET['order'];
+      echo $user;
+      echo $order;
+      ?>
+      <div>
+        <input type='hidden' name='user' value=' <?= $user ?>'>
+      </div>
+      <div>
+        <input type='hidden' name='order' value=' <?= $order ?>'>
+      </div>
 
 
       <!-- Image -->
