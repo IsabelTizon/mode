@@ -85,8 +85,20 @@ error_reporting(E_ALL);
                         echo '<div class="card-body"></a>';
                         echo '<div class="display-title-favorite">';
                         echo '<h6 class="card-title">£' . $row['price'] . '</h6>';
+
+
+                        //Picking the product to be delete it
+                        echo '<form class="favForm" action="delete-fav.php?=user' . $row["order_ID"] . '" method="get" id="formFav" enctype="multipart/form-data" novalidate>';
+
+                        echo '<input type="hidden" id="order" name="order" value=' . $row["order_ID"] . '>';  // hidden order 
+                        // I will need both values to can grab the product and delete or edi it
+
+
+                        //Delete fav
                         echo '<a href="delete-fav.php?order=' . $row['order_ID'] . ' "><span class="material-symbols-outlined">delete</span></a>';
                         echo '</div>';
+
+                        //Card body
                         echo '<p class="card-text">' . $row['brand'] . '</p>';
                         echo '<p class="card-text">' . $row['descript'] . '</p>';
                         echo '<p class="card-text">size ' . $row['size'] . '</p>';
