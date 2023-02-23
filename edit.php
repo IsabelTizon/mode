@@ -103,8 +103,8 @@ error_reporting(E_ALL);
 
       <?php $user = $_GET['user'];
       $order = $_GET['order'];
-      echo $user;
-      echo $order;
+      // echo $user;
+      // echo $order;
       ?>
       <div>
         <input type='hidden' name='user' value=' <?= $user ?>'>
