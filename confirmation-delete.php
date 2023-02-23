@@ -52,13 +52,19 @@ error_reporting(E_ALL);
             width: 80%;
         }
 
+        .card-item {
+            width: 80%;
+            margin: 20px auto;
+
+        }
+
         .btn.btn-red {
             border-color: #fad8d8;
             background-color: #fad8d8;
             color: #000000;
             font-size: 14px;
-            width: 80%;
-            margin: auto;
+            width: 100%;
+            margin-top: 20px;
         }
 
         .btn.btn-purple {
@@ -66,8 +72,8 @@ error_reporting(E_ALL);
             background-color: #ffffff;
             color: #000000;
             font-size: 14px;
-            width: 80%;
-            margin: auto;
+            width: 100%;
+            margin-top: 20px;
 
         }
     </style>
@@ -91,14 +97,6 @@ error_reporting(E_ALL);
             <div class="btns-confimation-delete">
 
                 <?php
-                // $user = $_GET["user"];
-                // $order = $_GET['order'];
-                // echo $user;
-                // echo $order;
-                ?>
-
-
-                <?php
 
                 include("includes/dbconx.php");
                 include("includes/error-reporting.php");
@@ -119,23 +117,11 @@ error_reporting(E_ALL);
 
                         //Card
                         echo '<div class="card-item">';
-                        echo '<a href="item-page.php?ID=' . $row['order_ID'] . '"><img class="card-img-top" alt="item picture" src=' . '"media/items/photos/' . $row['itemPic'] . '"' . '></a>';
+                        echo '<img class="card-img-top" alt="item picture" src=' . '"media/items/photos/' . $row['itemPic'] . '"' . '>';
                         echo '<div class="card-body body-btn-dashboard">';
-
-
-                        // // //Picking the product to be DELETE it
-                        // echo '<form class="favForm" action="delete.php?=user' . $user["user_ID"] . $row["order_ID"] . '" method="get" id="formFav" enctype="multipart/form-data" novalidate>';
-
-                        // echo '<input type="hidden" id="user" name="user" value=' . $user["user_ID"] . '>';  // hidden user 
-
-                        // echo '<input type="hidden" id="order" name="order" value=' . $row["order_ID"] . '>';  // hidden order 
+                        //Confirmation delete btns
                         echo '<a href="dashboard.php"><button class="btn btn-purple">No</button></a>';
                         echo '<a href="delete.php?order=' . $row['order_ID'] . ' "><button class="btn btn-red">Yes</button></a>';
-
-
-                        // echo '</form>';
-                        // I will need both values to can grab the product and delete or edi it
-
                         echo '</div>';
                         echo '</div>';
                     }
