@@ -50,10 +50,10 @@ error_reporting(E_ALL);
             <?php
 
             $ID =  $_GET['ID'];
-            //Selecting data from the itemsMode table when the order ID  is equal to the item selected 
-            if ($stmt = $conn->prepare("SELECT * FROM itemsMode WHERE order_ID='$ID'")) {
+
+            if ($stmt = $conn->prepare("SELECT itemsMode.order_ID, itemsMode.itemPic, itemsMode.descript, itemsMode.brand, itemsMode.size, itemsMode.price, itemsMode.condition1, users.username FROM itemsMode INNER JOIN users ON users.user_ID = itemsMode.user_ID WHERE itemsMode.order_ID = $ID")) {
                 $stmt->execute(); // execute sql statement
-                $result = $stmt->get_result(); //getting the result
+                $result = $stmt->get_result(); //returns the results from sql statement
 
 
                 echo '<div class="det-record">';
@@ -68,12 +68,13 @@ error_reporting(E_ALL);
                         echo '<p class="det det-descript">DESCRIPTION: ' . $row['descript'] . '</p>';
                         echo '<p class="det det-size">SIZE: ' . $row['size'] . '</p>';
                         echo '<p class="det det-condition1">CONDITION: ' . $row['condition1'] . '</p>';
+                        echo '<p class="det det-seller">SELLER: ' . $row['username'] . '</p>';
 
                         //Container 2 btns: favourites and buy 
                         echo '<div class="display-btnBuy-favorite">';
 
                         //favourite btn
-                        echo '<form class="favForm" action="process-fav.php?=user' . $user["user_ID"] . $row["order_ID"] . '" method="get" id="formFav" enctype="multipart/form-data" novalidate>';
+                        echo '<form style="margin-top:80px;" class="favForm" action="process-fav.php?=user' . $user["user_ID"] . $row["order_ID"] . '" method="get" id="formFav" enctype="multipart/form-data" novalidate>';
 
                         echo '<input type="hidden" id="user" name="user" value=' . $user["user_ID"] . '>';  // hidden user 
 
@@ -96,6 +97,7 @@ error_reporting(E_ALL);
                         echo '<p class="det det-descript">DESCRIPTION: ' . $row['descript'] . '</p>';
                         echo '<p class="det det-size">SIZE: ' . $row['size'] . '</p>';
                         echo '<p class="det det-condition1">CONDITION: ' . $row['condition1'] . '</p>';
+                        echo '<p class="det det-seller">SELLER: ' . $row['username'] . '</p>';
 
                         //Container 2 btns: favourites and buy 
                         echo '<div class="display-btnBuy-favorite">';
