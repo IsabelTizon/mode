@@ -159,7 +159,7 @@ error_reporting(E_ALL);
       </div>
 
       <div class="container-input">
-        <label for="size">size</label>
+        <label for="size">size: </label>
         <div>
           <select name="size" id="size">
             <option value="">--Please select an option--</option>
@@ -167,8 +167,8 @@ error_reporting(E_ALL);
             echo $size = $_GET["size"]
             ?>
             <option <?php echo $size == "on size" ? 'selected' : ''; ?>>one size</option>
-            <option <?php echo $size == "xs" ? 'selected' : ''; ?>>xs</option>
-            <option <?php echo $size == "s" ? 'selected' : ''; ?>>s</option>
+            <option <?php echo $size == "XS" ? 'selected' : ''; ?>>XS</option>
+            <option <?php echo $size == "S" ? 'selected' : ''; ?>>S</option>
             <option <?php echo $size == "M" ? 'selected' : ''; ?>>M</option>
             <option <?php echo $size == "L" ? 'selected' : ''; ?>>L</option>
             <option <?php echo $size == "XL" ? 'selected' : ''; ?>>XL</option>

@@ -36,9 +36,15 @@ error_reporting(E_ALL);
             margin-bottom: 20px;
         }
 
-        .btn-login {
+        .btn.btn-login {
             width: 100%;
             margin-bottom: 20px;
+            background-color: #712296;
+            color: #ffffff;
+        }
+
+        .btn.btn-login:hover {
+            color: #ffffff;
         }
     </style>
 
@@ -80,7 +86,7 @@ error_reporting(E_ALL);
                     <input class="input-login" type="password" name="password" id="password"><br>
 
                     <!-- Button to submit -->
-                    <button class="btn btn-info btn-login">Continue</button>
+                    <button class="btn btn-login">Continue</button>
                 </form>
             </div>
         </div>
