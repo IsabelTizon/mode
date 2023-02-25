@@ -60,6 +60,11 @@ error_reporting(E_ALL);
       border-bottom: 1px solid #928D8D;
       width: 80%;
     }
+
+    .btn.btn-upload-edit {
+      color: #ffffff;
+      background-color: #712296;
+    }
   </style>
 
   <!-- Just validate -->
@@ -199,7 +204,7 @@ error_reporting(E_ALL);
       </div>
 
       <!-- Upload button  -->
-      <button type="submit" id="uploadItem" name="submitEdit" class="btn btn-info">Upload</button>
+      <button type="submit" id="uploadItem" name="submitEdit" class="btn btn-upload-edit">Upload</button>
 
     </form>
   </main>

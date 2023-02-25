@@ -60,6 +60,11 @@ error_reporting(E_ALL);
       border-bottom: 1px solid #928D8D;
       width: 80%;
     }
+
+    .btn.btn-upload-sell {
+      color: #ffffff;
+      background-color: #712296;
+    }
   </style>
 
   <!-- Just validate -->
@@ -186,7 +191,7 @@ error_reporting(E_ALL);
       </div>
 
       <!-- Button to submit -->
-      <button type="submit" id="uploadItem" name="submitSell" class="btn btn-info">Upload</button>
+      <button type="submit" id="uploadItem" name="submitSell" class="btn btn-upload-sell">Upload</button>
 
     </form>
   </main>
