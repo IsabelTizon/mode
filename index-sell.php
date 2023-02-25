@@ -103,11 +103,8 @@ error_reporting(E_ALL);
 
       <!-- Image -->
       <div class="container-input container-input-file">
-        <p>Upload photos</p>
-        <!-- <label for="file">Upload photos</label><br> -->
+        <label for="file">Upload photos</label><br>
         <input type="file" name="file" id="file">
-
-        <!-- <button type="submit" id="submitImgPic" name="submit">Upload picture</button> -->
       </div>
 
       <!-- title -->

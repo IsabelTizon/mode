@@ -55,8 +55,9 @@
 	border-bottom: 1px solid #cfc9c9;
 	padding: 10px 10px 10px 40px;
 }
-.link-navbar {
-	color: #cfc9c9;
+a.link-navbar {
+	/* color: #cfc9c9; */
+	color: #6e6e6e;
 	margin-right: 40px;
 	letter-spacing: 2px;
 	font-size: 14px;

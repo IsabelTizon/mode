@@ -76,9 +76,9 @@ error_reporting(E_ALL);
                         //favourite btn
                         echo '<form style="margin-top:80px;" class="favForm" action="process-fav.php?=user' . $user["user_ID"] . $row["order_ID"] . '" method="get" id="formFav" enctype="multipart/form-data" novalidate>';
 
-                        echo '<input type="hidden" id="user" name="user" value=' . $user["user_ID"] . '>';  // hidden user 
+                        echo '<input type="hidden" name="user" value=' . $user["user_ID"] . '>';  // hidden user 
 
-                        echo '<input type="hidden" id="order" name="order" value=' . $row["order_ID"] . '>';  // hidden order 
+                        echo '<input type="hidden" name="order" value=' . $row["order_ID"] . '>';  // hidden order 
                         // I will need both values to can grab the user favourite products 
 
                         echo '<button type="submit" value="submit" class="btn btn-add-favorite"><span class="material-symbols-outlined favorite-icon">favorite</span></button>';

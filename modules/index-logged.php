@@ -19,11 +19,11 @@ if ($stmt = $conn->prepare("SELECT order_ID, itemPic, title, descript, category,
         echo '<h6 class="card-title">£' . $row['price'] . '</h6>';
 
         //favourite
-        echo '<form class="favForm" action="process-fav.php?=user' . $user["user_ID"] . $row["order_ID"] . '" method="get" id="formFav" enctype="multipart/form-data" novalidate>';
+        echo '<form class="favForm" action="process-fav.php?=user' . $user["user_ID"] . $row["order_ID"] . '" method="get">';
 
-        echo '<input type="hidden" id="user" name="user" value=' . $user["user_ID"] . '>';  // hidden user 
+        echo '<input type="hidden" name="user" value=' . $user["user_ID"] . '>';  // hidden user 
 
-        echo '<input type="hidden" id="order" name="order" value=' . $row["order_ID"] . '>';  // hidden order 
+        echo '<input type="hidden" name="order" value=' . $row["order_ID"] . '>';  // hidden order 
         // I will need both values to can grab the user favourite products 
 
         echo '<button type="submit" value="submit" class="btn btn-add-favorite"><span class="material-symbols-outlined">favorite</span></button>';

@@ -90,9 +90,9 @@ error_reporting(E_ALL);
 
 
                         //Picking the product to be delete it
-                        echo '<form class="favForm" action="delete-fav.php?=user' . $row["order_ID"] . '" method="get" id="formFav" enctype="multipart/form-data" novalidate>';
+                        echo '<form class="favForm" action="delete-fav.php?=user' . $row["order_ID"] . '" method="get">';
 
-                        echo '<input type="hidden" id="order" name="order" value=' . $row["order_ID"] . '>';  // hidden order 
+                        echo '<input type="hidden" name="order" value=' . $row["order_ID"] . '>';  // hidden order 
                         // I will need both values to can grab the product and delete or edi it
 
 

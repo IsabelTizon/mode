@@ -76,15 +76,15 @@ error_reporting(E_ALL);
 
                         //Card
                         echo '<div class="card-item">';
-                        echo '<a href="item-page.php?ID=' . $row['order_ID'] . '"><img class="card-img-top" alt="item picture" src=' . '"media/items/photos/' . $row['itemPic'] . '"' . '></a>';
+                        echo '<a href="item-user-logged.php?ID=' . $row['order_ID'] . '"><img class="card-img-top" alt="item picture" src=' . '"media/items/photos/' . $row['itemPic'] . '"' . '></a>';
                         echo '<div class="card-body body-btn-dashboard">';
 
                         //Picking the product to be EDIT it
-                        echo '<form class="favForm" action="edit.php?=user' . $user["user_ID"] . $row["order_ID"] . '" method="get" id="formFav" enctype="multipart/form-data" novalidate>';
+                        echo '<form class="favForm" action="edit.php?=user' . $user["user_ID"] . $row["order_ID"] . '" method="get">';
 
-                        echo '<input type="hidden" id="user" name="user" value=' . $user["user_ID"] . '>';  // hidden user 
+                        echo '<input type="hidden" name="user" value=' . $user["user_ID"] . '>';  // hidden user 
 
-                        echo '<input type="hidden" id="order" name="order" value=' . $row["order_ID"] . '>';  // hidden order 
+                        echo '<input type="hidden" name="order" value=' . $row["order_ID"] . '>';  // hidden order 
                         // I will need both values to can grab the product and delete or edi it
 
                         //Edit btn
@@ -94,11 +94,11 @@ error_reporting(E_ALL);
                         //CONFIRMATION
 
                         //Picking the product to be DELETE it
-                        echo '<form class="favForm" action="confirmation-delete.php?=user' . $user["user_ID"] . $row["order_ID"] . '" method="get" id="formFav" enctype="multipart/form-data" novalidate>';
+                        echo '<form class="favForm" action="confirmation-delete.php?=user' . $user["user_ID"] . $row["order_ID"] . '" method="get">';
 
-                        echo '<input type="hidden" id="user" name="user" value=' . $user["user_ID"] . '>';  // hidden user 
+                        echo '<input type="hidden" name="user" value=' . $user["user_ID"] . '>';  // hidden user 
 
-                        echo '<input type="hidden" id="order" name="order" value=' . $row["order_ID"] . '>';  // hidden order 
+                        echo '<input type="hidden" name="order" value=' . $row["order_ID"] . '>';  // hidden order 
                         // I will need both values to can grab the product to deleteit
 
 

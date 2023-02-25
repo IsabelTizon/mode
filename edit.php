@@ -116,7 +116,7 @@ error_reporting(E_ALL);
 
       <!-- Image -->
       <div class="container-input container-input-file">
-        <p>Upload photos</p>
+        <label for="file">Upload photos</label><br>
         <input type="file" name="file" id="file" value="<?php $row['itemPic'] ?>">
       </div>
 
