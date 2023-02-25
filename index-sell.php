@@ -28,7 +28,6 @@ error_reporting(E_ALL);
 <head>
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/sell.css">
 
   <!-- Internal CSS because they sid not work external -->
   <style>
