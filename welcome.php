@@ -1,6 +1,6 @@
 <?php
 // Including active session, error reporting and config files
-include("includes/active_session.php");
+// include("includes/active_session.php");
 include("includes/error-reporting.php");
 include("includes/config.php"); ?>
 
